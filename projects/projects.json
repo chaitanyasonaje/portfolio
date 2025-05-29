@@ -1,142 +1,123 @@
 [
   {
-    "name": "Diabetes Prediction",
-    "desc": "A machine learning model that predicts the likelihood of a person having diabetes based on medical data and test results.",
+    "name": "Agrikul",
+    "desc": "A comprehensive agricultural platform connecting farmers and buyers, built with TypeScript.",
     "image": "diabetesprediction",
-    "category": "machine learning",
+    "category": "web",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/Diabetes-prediction-tool",
-      "code": "https://github.com/chaitanyasonaje/Diabetes-prediction-tool"
-    }
+      
+      "code": "https://github.com/chaitanyasonaje/Agrikul"
+    },
+    "updated_at": "May 23, 2025"
   },
   {
-    "name": "Disease Prediction Website",
-    "desc": "A machine learning-powered website to predict diseases like diabetes and other conditions, offering early diagnosis insights.",
+    "name": "CryptoScan",
+    "desc": "AI-Powered Cryptographic Algorithm Identification system using machine learning.",
     "image": "diseaseprediction",
     "category": "ml",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/disease-prediction-website",
-      "code": "https://github.com/chaitanyasonaje/disease-prediction-website"
-    }
+     
+      "code": "https://github.com/chaitanyasonaje/CryptoScan"
+    },
+    "updated_at": "May 2, 2025"
   },
+
   {
-    "name": "Number Plate Detection",
-    "desc": "Machine learning model to predict and recognize vehicle number plates, displaying vehicle owner information.",
-    "image": "npr",
+    "name": "Instagram Fake Account Detection",
+    "desc": "Machine learning project to detect fake Instagram accounts using various ML models including Random Forest, SVM, ANN, and GRU.",
+    "image": "er",
     "category": "ml",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/number-plate-detection",
-      "code": "https://github.com/chaitanyasonaje/number-plate-detection"
-    }
+      
+      "code": "https://github.com/chaitanyasonaje/Instagram-Fake-Account-Detection-Using-Machine-Learning-"
+    },
+    "updated_at": "Apr 27, 2025"
   },
   {
-    "name": "Endless Runner Game",
-    "desc": "A game where the character runs continuously while dodging obstacles, with a score that increases over time.",
-    "image": "er",
-    "category": "game",
-    "links": {
-      "view": "https://github.com/chaitanyasonaje/endless-runner-game",
-      "code": "https://github.com/chaitanyasonaje/endless-runner-game"
-    }
-  },
-  {
-    "name": "Expense Tracker App",
-    "desc": "An app to track expenses and income, featuring charts for spending categories and data storage using AsyncStorage.",
+    "name": "Sign Language Translator",
+    "desc": "Real-time sign language translation android app using AI. Converts sign gestures to speech and vice versa for seamless communication.",
     "image": "et",
     "category": "mobile",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/expense-tracker-app",
-      "code": "https://github.com/chaitanyasonaje/expense-tracker-app"
-    }
+    
+      "code": "https://github.com/chaitanyasonaje/sign-language-translator"
+    },
+    "updated_at": "Apr 21, 2025"
   },
   {
-    "name": "Portfolio Website",
-    "desc": "A personal portfolio website showcasing web development skills and projects.",
+    "name": "True-Cert",
+    "desc": "Blockchain-based digital certificate verification system ensuring secure, tamper-proof, and easily verifiable certificates.",
     "image": "pr",
-    "category": "basicweb",
+    "category": "blockchain",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/portfolio-website",
-      "code": "https://github.com/chaitanyasonaje/portfolio-website"
-    }
+      "view": "https://true-cert-1.onrender.com/",
+      "code": "https://github.com/chaitanyasonaje/True-Cert"
+    },
+    "updated_at": "Feb 28, 2025"
   },
   {
-    "name": "Movie Genre Classification",
-    "desc": "A machine learning project that classifies movies into genres based on plot summaries using TF-IDF and classification algorithms.",
+    "name": "Diabetes Prediction Tool",
+    "desc": "Machine learning model to predict diabetes based on medical data and test results.",
     "image": "mgc",
     "category": "ml",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/movie-genre-classification",
-      "code": "https://github.com/chaitanyasonaje/movie-genre-classification"
-    }
+      
+      "code": "https://github.com/chaitanyasonaje/Diabetes-prediction-tool"
+    },
+    "updated_at": "Feb 1, 2025"
   },
   {
-    "name": "Credit Card Fraud Detection",
-    "desc": "A machine learning model to detect fraudulent credit card transactions using algorithms like Logistic Regression and Random Forests.",
+    "name": "TollEase",
+    "desc": "Toll Management System with License Plate Recognition (LPR) technology.",
     "image": "cf",
-    "category": "ml",
+    "category": "web",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/credit-card-fraud-detection",
-      "code": "https://github.com/chaitanyasonaje/credit-card-fraud-detection"
-    }
+      
+      "code": "https://github.com/chaitanyasonaje/TollEase"
+    },
+    "updated_at": "Dec 30, 2024"
   },
   {
-    "name": "MERN Stack E-commerce Website",
-    "desc": "Full-stack e-commerce website built using the MERN stack, featuring product listings, a shopping cart, and a checkout system.",
+    "name": "ResuMate",
+    "desc": "AI-powered resume generation tool to help create professional resumes.",
     "image": "mern",
-    "category": "mern",
+    "category": "web",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/mern-ecommerce-website",
-      "code": "https://github.com/chaitanyasonaje/mern-ecommerce-website"
-    }
+      "view": "chaitanya-resumateai.netlify.app/",
+      "code": "https://github.com/chaitanyasonaje/ResuMate"
+    },
+    "updated_at": "Dec 12, 2024"
   },
   {
-    "name": "Smart India Hackathon Project",
-    "desc": "A project focused on developing a Direct Market Access app for farmers to streamline the agricultural supply chain.",
+    "name": "CryptoLedger",
+    "desc": "Blockchain-based project for cryptocurrency transaction management.",
     "image": "sih",
-    "category": "hackathon",
+    "category": "blockchain",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/sih-project",
-      "code": "https://github.com/chaitanyasonaje/sih-project"
-    }
+     
+      "code": "https://github.com/chaitanyasonaje/CryptoLedger"
+    },
+    "updated_at": "Dec 12, 2024"
   },
   {
-    "name": "Chatting Website with CometChat SDK",
-    "desc": "A website for real-time chatting, built using the CometChat SDK for seamless communication.",
+    "name": "Portfolio Website",
+    "desc": "Personal portfolio website showcasing projects and skills.",
     "image": "ct",
     "category": "web",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/chatting-website",
-      "code": "https://github.com/chaitanyasonaje/chatting-website"
-    }
+      "view": "https://chaitanyasonaje.github.io/portfolio/",
+      "code": "https://github.com/chaitanyasonaje/portfolio"
+    },
+    "updated_at": "Dec 6, 2024"
   },
   {
-    "name": "Boradi Village Website",
-    "desc": "A website to introduce Boradi village in Maharashtra, highlighting its culture, history, and attractions.",
+    "name": "React Native Todo App",
+    "desc": "Mobile application for managing tasks and to-do lists built with React Native.",
     "image": "br",
-    "category": "basicweb",
-    "links": {
-      "view": "https://github.com/chaitanyasonaje/boradi-village-website",
-      "code": "https://github.com/chaitanyasonaje/boradi-village-website"
-    }
-  },
-  {
-    "name": "Tollify Website",
-    "desc": "A website designed for toll management, providing a seamless experience for users and managing toll data efficiently.",
-    "image": "tollify",
-    "category": "web",
-    "links": {
-      "view": "https://github.com/chaitanyasonaje/tollify-website",
-      "code": "https://github.com/chaitanyasonaje/tollify-website"
-    }
-  },
-  {
-    "name": "React Native To-Do App",
-    "desc": "An app for managing tasks and to-do lists.",
-    "image": "todoapp",
     "category": "mobile",
     "links": {
-      "view": "https://github.com/chaitanyasonaje/react-native-todo-app",
       "code": "https://github.com/chaitanyasonaje/react-native-todo-app"
-    }
+    },
+    "updated_at": "Dec 4, 2024"
   }
 ]

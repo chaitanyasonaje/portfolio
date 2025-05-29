@@ -1,0 +1,32 @@
+[
+  {
+    "platform": "LeetCode",
+    "logo_icon": "fas fa-code",
+    "stats": [
+      {"icon": "fas fa-fire", "value": "1642", "label": "Contest Rating"},
+      {"icon": "fas fa-chart-line", "value": "807,134", "label": "Global Rank"},
+      {"icon": "fas fa-laptop-code", "value": "137", "label": "Problems Solved"}
+    ],
+    "link": "https://leetcode.com/u/Chaitanya_0205/"
+  },
+  {
+    "platform": "CodeChef",
+    "logo_icon": "fas fa-code",
+    "stats": [
+      {"icon": "fas fa-star", "value": "850", "label": "Rating"},
+      {"icon": "fas fa-globe", "value": "5037", "label": "Global Rank"},
+      {"icon": "fas fa-code", "value": "1271", "label": "Problems Solved"}
+    ],
+    "link": "https://www.codechef.com/users/chaitanya0205"
+  },
+  {
+    "platform": "Kaggle",
+    "logo_icon": "fab fa-kaggle",
+    "stats": [
+      {"icon": "fas fa-trophy", "value": "2", "label": "Total Competitions"},
+      {"icon": "fas fa-code", "value": "2", "label": "Public Notebooks"},
+      {"icon": "fas fa-database", "value": "2", "label": "Public Datasets"}
+    ],
+    "link": "https://www.kaggle.com/chaitanya205"
+  }
+] 

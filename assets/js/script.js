@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "Machine Learning",  "android development", "web development"],
+    strings: ["AI & ML Engineer", "Full Stack Developer", "Data Scientist", "Programmer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -79,131 +79,14 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json")
-    const data = await response.json();
-    return data;
-}
-
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
-
-function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
-    let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectHTML;
-
-    // <!-- tilt js effect starts -->
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
-    // <!-- tilt js effect ends -->
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
-    });
-
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
-
-}
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-fetchData("projects").then(data => {
-    showProjects(data);
-});
-
-// <!-- tilt js effect starts -->
+// <!-- vanilla tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
+    speed: 400
 });
-// <!-- tilt js effect ends -->
+// <!-- vanilla tilt js effect ends -->
 
-
-// pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
-// pre loader end
-
-// disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
-
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
-
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
+// <!-- scroll reveal anim starts -->
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
@@ -216,30 +99,32 @@ srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
 srtop.reveal('.home .content .btn', { delay: 200 });
 
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal('.home .image', { delay: 300 });
+srtop.reveal('.home .linkedin', { delay: 600 });
+srtop.reveal('.home .github', { delay: 700 });
+srtop.reveal('.home .linkedin', { delay: 600 });
+srtop.reveal('.home .github', { delay: 700 });
+srtop.reveal('.home .twitter', { delay: 800 });
+srtop.reveal('.home .googlescholar', { delay: 900 });
+srtop.reveal('.home .facebook', { delay: 1000 });
+// srtop.reveal('.home .instagram', { delay: 1100 });
 
 /* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
+srtop.reveal('.about .image', { delay: 500 });
+srtop.reveal('.about .content h3', { delay: 500 });
+srtop.reveal('.about .content .tag', { delay: 600 });
+srtop.reveal('.about .content p', { delay: 700 });
+srtop.reveal('.about .content .box-container', { delay: 700 });
+srtop.reveal('.about .content .resumebtn', { delay: 900 });
 
-
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
 
-/* SCROLL PROJECTS */
+/* SCROLL SKILLS */
+srtop.reveal('.skills .container', { interval: 200 });
+
+/* SCROLL WORK */
 srtop.reveal('.work .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
@@ -249,3 +134,291 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+// <!-- scroll reveal anim ends -->
+
+// <!-- tilt js effect starts -->
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 25,
+    speed: 400
+});
+// <!-- tilt js effect ends -->
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+const srtop_ = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 1000,
+    reset: true
+});
+
+/* SCROLL HOME */
+srtop_.reveal('.home .content h3', { delay: 200 });
+srtop_.reveal('.home .content p', { delay: 200 });
+srtop_.reveal('.home .content .btn', { delay: 200 });
+
+srtop_.reveal('.home .image', { delay: 300 });
+srtop_.reveal('.home .socials', { delay: 600 });
+srtop_.reveal('.home .social-icons', { delay: 600 });
+
+/* SCROLL ABOUT */
+srtop_.reveal('.about .image', { delay: 500 });
+srtop_.reveal('.about .content h3', { delay: 500 });
+srtop_.reveal('.about .content .tag', { delay: 600 });
+srtop_.reveal('.about .content p', { delay: 700 });
+srtop_.reveal('.about .content .box-container', { delay: 700 });
+srtop_.reveal('.about .content .resumebtn', { delay: 900 });
+
+
+/* SCROLL EDUCATION */
+srtop_.reveal('.education .box', { interval: 200 });
+
+/* SCROLL SKILLS */
+srtop_.reveal('.skills .container', { interval: 200 });
+
+/* SCROLL WORK */
+srtop_.reveal('.work .box', { interval: 200 });
+
+/* SCROLL EXPERIENCE */
+srtop_.reveal('.experience .timeline', { delay: 400 });
+srtop_.reveal('.experience .timeline .container', { interval: 400 });
+
+/* SCROLL CONTACT */
+srtop_.reveal('.contact .container', { delay: 400 });
+srtop_.reveal('.contact .container .form-group', { delay: 400 });
+
+/**chnages made**/
+
+
+/* ===== SCROLL top button===== */
+$(window).scroll(function(){
+  if($(window).scrollTop() > 600){
+    $('#scroll-top').addClass('active');
+  }else{
+    $('#scroll-top').removeClass('active');
+  }
+});
+
+// smooth scrolling
+$('a[href*="#"]').on('click',function(e){
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop : $('' + this.hash + '').offset().top,
+  },
+    500,
+    'linear'
+  );
+});
+
+
+// <!-- emailjs to mail contact form -->
+$("#contact-form").submit(function() {
+    emailjs.sendForm("service_portfolio", "template_jv7a83i", this);
+});
+
+// <!-- === FONT AWESOME ALIAS === -->
+// The alias for the icon is `fas fa-code`. This is already correct. No change needed.
+// The alias for the icon is `fas fa-brain`. This is already correct. No change needed.
+// The alias for the icon is `fas fa-microchip`. This is already correct. No change needed.
+
+
+// <!-- SCROLL CARDS -->
+// <!-- TILT.JS FOR PROJECTS -->
+
+// function scrollCard(elementId) {
+//     const element = document.getElementById(elementId);
+//     element.scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// }
+
+
+// <!-- Isotope js-->
+// $(document).ready(function(){
+//     $('.button-group').each( function( i, buttonGroup ) {
+//       var $buttonGroup = $( buttonGroup );
+//       $buttonGroup.on( 'click', 'button', function() {
+//         $buttonGroup.find('.is-checked').removeClass('is-checked');
+//         $( this ).addClass('is-checked');
+//       });
+//     });
+//   });
+
+// Function to filter projects
+// $(document).ready(function() {
+//     var $grid = $('.box-container').isotope({
+//         itemSelector: '.box',
+//         layoutMode: 'fitRows'
+//     });
+
+//     $('.button-group').on('click', 'button', function() {
+//         var filterValue = $(this).attr('data-filter');
+//         $grid.isotope({ filter: filterValue });
+//     });
+// });
+
+const fetchProjects = () => {
+    fetch('projects/projects.json')
+        .then(response => response.json())
+        .then(data => {
+            const mlProjectsList = document.getElementById('ml-projects-list');
+            const webProjectsList = document.getElementById('web-projects-list');
+            const mobileProjectsList = document.getElementById('mobile-projects-list');
+            const blockchainProjectsList = document.getElementById('blockchain-projects-list');
+
+            data.forEach(project => {
+                const projectItem = document.createElement('div');
+                projectItem.classList.add('project-item');
+
+                let formattedDate = '';
+                if (project.updated_at) {
+                    const date = new Date(project.updated_at);
+                    const options = { year: 'numeric', month: 'long' };
+                    formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+                }
+
+                projectItem.innerHTML = `
+                    <div class="content">
+                        <h4>${project.name}</h4>
+                        <p>${project.desc}</p>
+                        ${formattedDate ? `<p class="project-update-time">${formattedDate}</p>` : ''}
+                        <div class="project-links">
+                            ${project.links.code ? `<a href="${project.links.code}" class="btn" target="_blank">View on GitHub <i class="fas fa-code"></i></a>` : ''}
+                            ${project.links.view ? `<a href="${project.links.view}" class="btn" target="_blank">Live <i class="fas fa-eye"></i></a>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                // Append project to the correct category list
+                switch (project.category) {
+                    case 'ml':
+                        mlProjectsList.appendChild(projectItem);
+                        break;
+                    case 'web':
+                        webProjectsList.appendChild(projectItem);
+                        break;
+                    case 'mobile':
+                        mobileProjectsList.appendChild(projectItem);
+                        break;
+                    case 'blockchain':
+                        blockchainProjectsList.appendChild(projectItem);
+                        break;
+                    // Add cases for other categories if needed
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching projects:', error));
+};
+
+fetchProjects();
+
+const fetchCompStats = () => {
+    fetch('comp_stats.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.querySelector('#competitive .container');
+            data.forEach(platform => {
+                const card = document.createElement('div');
+                card.classList.add('competitive-card');
+
+                let statsHtml = '';
+                platform.stats.forEach(stat => {
+                    statsHtml += `<p><i class="${stat.icon}"></i> ${stat.label}: ${stat.value}</p>`;
+                });
+
+                card.innerHTML = `
+                    <div class="competitive-logo">
+                        <i class="${platform.logo_icon}"></i>
+                    </div>
+                    <div class="competitive-content">
+                        <h4>${platform.platform}</h4>
+                        ${statsHtml}
+                        <a href="${platform.link}" target="_blank" class="btn">Visit Profile <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+             // Reinitialize ScrollReveal to include the new cards
+            ScrollReveal().sync();
+        })
+        .catch(error => console.error('Error fetching competitive stats:', error));
+};
+
+fetchCompStats();
+
+// <!-- Chatbot JavaScript starts -->
+const chatbotIcon = document.querySelector('.chatbot-icon');
+const chatWindow = document.querySelector('.chat-window');
+const closeChat = document.querySelector('.close-chat');
+const chatBody = document.querySelector('.chat-body');
+const chatInput = document.querySelector('.chat-window input[type="text"]');
+const sendBtn = document.querySelector('.chat-window .send-btn');
+
+chatbotIcon.addEventListener('click', () => {
+    chatWindow.classList.toggle('active');
+});
+
+closeChat.addEventListener('click', () => {
+    chatWindow.classList.remove('active');
+});
+
+sendBtn.addEventListener('click', sendMessage);
+chatInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
+    const userMessage = chatInput.value.trim();
+    if (userMessage === '') return;
+
+    // Add user message to chat body
+    appendMessage(userMessage, 'user-message');
+
+    // Get bot response
+    const botResponse = getBotResponse(userMessage);
+    // Add bot response to chat body
+    setTimeout(() => {
+        appendMessage(botResponse, 'bot-message');
+    }, 500); // Simulate typing delay
+
+    // Clear input
+    chatInput.value = '';
+    // Scroll to bottom
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function appendMessage(message, type) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', type);
+    messageElement.textContent = message;
+    chatBody.appendChild(messageElement);
+}
+
+function getBotResponse(userMessage) {
+    const lowerCaseMessage = userMessage.toLowerCase();
+
+    // Keyword-based responses
+    if (lowerCaseMessage.includes('skill')) {
+        return "Chaitanya's skills include Languages (Python, Java, JavaScript), Web & App Development (Next.js, React, Node.js, MongoDB), AI/ML/Data Science (Scikit-learn, Pandas, NumPy), Cybersecurity, Computer Vision, and various Tools & Platforms (Git, GitHub, VS Code, etc.).";
+    } else if (lowerCaseMessage.includes('education')) {
+        return "Chaitanya is pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning at R. C. Patel Institute of Technology, Shirpur. He also completed his HSC and SSC from R. C. Patel institutions.";
+    } else if (lowerCaseMessage.includes('project')) {
+        return "Chaitanya has projects in Machine Learning, Web Development, Mobile Development, and Blockchain. You can find more details in the Projects section of the portfolio.";
+    } else if (lowerCaseMessage.includes('contact')) {
+        return "You can get in touch with Chaitanya via email at chaitanyasonaje0205@gmail.com, phone at +91 80100 83340, or connect with him on social media like LinkedIn, GitHub, Instagram, and Kaggle. You can also use the contact form on the website.";
+    } else if (lowerCaseMessage.includes('about')) {
+        return "Chaitanya is an AI & ML undergraduate based in Maharashtra, India. He is passionate about coding and developing innovative projects in AI, ML, and web development.";
+    } else if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')) {
+        return "Hello! How can I help you today?";
+    } else if (lowerCaseMessage.includes('name')) {
+        return "I am a chatbot here to assist you with questions about Chaitanya's portfolio.";
+    } else if (lowerCaseMessage.includes('thank')) {
+        return "You're welcome!";
+    } else {
+        return "I'm sorry, I don't understand that. I can tell you about Chaitanya's skills, education, projects, about him, or how to contact him.";
+    }
+}
+// <!-- Chatbot JavaScript ends -->

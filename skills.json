@@ -1,73 +1,103 @@
 [
     {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+        "name": "Python",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/python/python-original.svg"
     },
     {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        "name": "Flask",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/flask/flask-original.svg"
     },
     {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "name": "FastAPI",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+    },
+    {
+        "name": "Next.js",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/nextjs/nextjs-original.svg"
+    },
+    {
+        "name": "React.js",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/react/react-original.svg"
     },
     {
         "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "Machine Learning"
-    },
-    {
-        "name": "TensorFlow",
-        "icon": "https://img.icons8.com/color/48/000000/tensorflow.png"
-    },
-    {
-        "name": "Pygame"    },
-    {
-        "name": "React Native",
-        "icon": "https://img.icons8.com/color/48/000000/react-native.png"
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/mongodb/mongodb-original.svg"
     },
     {
         "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/firebase/firebase-plain.svg"
     },
     {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+        "name": "MySQL",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/mysql/mysql-original.svg"
     },
     {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.png"
-    },
-
-    {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
- 
-    {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+        "name": "Git",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/git/git-original.svg"
     },
     {
         "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/github/github-original.svg"
     },
     {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
+        "name": "VS Code",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/vscode/vscode-original.svg"
+    },
+    {
+        "name": "Jupyter Notebook",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg"
+    },
+    {
+        "name": "Figma",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/figma/figma-original.svg"
+    },
+    {
+        "name": "Canva",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
+    },
+    {
+        "name": "Google Colab",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg"
+    },
+    {
+        "name": "Scikit-learn",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+    },
+    {
+        "name": "Pandas",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+    },
+    {
+        "name": "NumPy",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
+    },
+    {
+        "name": "Matplotlib",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
+    },
+ 
+    {
+        "name": "TensorFlow",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+    },
+    {
+        "name": "Keras",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg"
+    },
+    {
+        "name": "OpenCV",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
+    },
+
+
+    {
+        "name": "Netlify",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+    },
+
+  
+    {
+        "name": "Clerk",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/clerk/clerk-original.svg"
     }
 ]
