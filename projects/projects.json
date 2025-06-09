@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Agrikul",
+    "desc": "A comprehensive agricultural platform connecting farmers and buyers, built with TypeScript.",
+    "image": "diabetesprediction",
+    "category": "web",
+    "links": {
+      
+      "code": "https://github.com/chaitanyasonaje/Agrikul"
+    },
+    "updated_at": "May 23, 2025"
+  },
+  {
+    "name": "CryptoScan",
+    "desc": "AI-Powered Cryptographic Algorithm Identification system using machine learning.",
+    "image": "diseaseprediction",
+    "category": "ml",
+    "links": {
+     
+      "code": "https://github.com/chaitanyasonaje/CryptoScan"
+    },
+    "updated_at": "May 2, 2025"
+  },
+
+  {
+    "name": "Instagram Fake Account Detection",
+    "desc": "Machine learning project to detect fake Instagram accounts using various ML models including Random Forest, SVM, ANN, and GRU.",
+    "image": "er",
+    "category": "ml",
+    "links": {
+      
+      "code": "https://github.com/chaitanyasonaje/Instagram-Fake-Account-Detection-Using-Machine-Learning-"
+    },
+    "updated_at": "Apr 27, 2025"
+  },
+  {
+    "name": "Sign Language Translator",
+    "desc": "Real-time sign language translation android app using AI. Converts sign gestures to speech and vice versa for seamless communication.",
+    "image": "et",
+    "category": "mobile",
+    "links": {
+    
+      "code": "https://github.com/chaitanyasonaje/sign-language-translator"
+    },
+    "updated_at": "Apr 21, 2025"
+  },
+  {
+    "name": "True-Cert",
+    "desc": "Blockchain-based digital certificate verification system ensuring secure, tamper-proof, and easily verifiable certificates.",
+    "image": "pr",
+    "category": "blockchain",
+    "links": {
+      "view": "https://true-cert-1.onrender.com/",
+      "code": "https://github.com/chaitanyasonaje/True-Cert"
+    },
+    "updated_at": "Feb 28, 2025"
+  },
+  {
+    "name": "Diabetes Prediction Tool",
+    "desc": "Machine learning model to predict diabetes based on medical data and test results.",
+    "image": "mgc",
+    "category": "ml",
+    "links": {
+      
+      "code": "https://github.com/chaitanyasonaje/Diabetes-prediction-tool"
+    },
+    "updated_at": "Feb 1, 2025"
+  },
+  {
+    "name": "TollEase",
+    "desc": "Toll Management System with License Plate Recognition (LPR) technology.",
+    "image": "cf",
+    "category": "web",
+    "links": {
+      
+      "code": "https://github.com/chaitanyasonaje/TollEase"
+    },
+    "updated_at": "Dec 30, 2024"
+  },
+  {
+    "name": "ResuMate",
+    "desc": "AI-powered resume generation tool to help create professional resumes.",
+    "image": "mern",
+    "category": "web",
+    "links": {
+      "view": "https://chaitanya-resumateai.netlify.app/",
+      "code": "https://github.com/chaitanyasonaje/ResuMate"
+    },
+    "updated_at": "Dec 12, 2024"
+  },
+  {
+    "name": "CryptoLedger",
+    "desc": "Blockchain-based project for cryptocurrency transaction management.",
+    "image": "sih",
+    "category": "blockchain",
+    "links": {
+     
+      "code": "https://github.com/chaitanyasonaje/CryptoLedger"
+    },
+    "updated_at": "Dec 12, 2024"
+  },
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal portfolio website showcasing projects and skills.",
+    "image": "ct",
+    "category": "web",
+    "links": {
+      "view": "https://chaitanyasonaje.github.io/portfolio/",
+      "code": "https://github.com/chaitanyasonaje/portfolio"
+    },
+    "updated_at": "Dec 6, 2024"
+  },
+  {
+    "name": "React Native Todo App",
+    "desc": "Mobile application for managing tasks and to-do lists built with React Native.",
+    "image": "br",
+    "category": "mobile",
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/react-native-todo-app"
+    },
+    "updated_at": "Dec 4, 2024"
+  }
+]
