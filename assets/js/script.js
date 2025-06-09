@@ -57,6 +57,56 @@ $(document).ready(function () {
     });
     // <!-- emailjs to mail contact form data -->
 
+    // <!-- scroll reveal anim starts -->
+    const srtop = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 1000,
+        reset: true
+    });
+
+    /* SCROLL HOME */
+    srtop.reveal('.home .content h3', { delay: 200 });
+    srtop.reveal('.home .content p', { delay: 200 });
+    srtop.reveal('.home .content .btn', { delay: 200 });
+
+    srtop.reveal('.home .image', { delay: 300 });
+    srtop.reveal('.home .linkedin', { delay: 600 });
+    srtop.reveal('.home .github', { delay: 700 });
+    srtop.reveal('.home .twitter', { delay: 800 });
+    srtop.reveal('.home .googlescholar', { delay: 900 });
+    srtop.reveal('.home .facebook', { delay: 1000 });
+    // srtop.reveal('.home .instagram', { delay: 1100 });
+    srtop.reveal('.home .socials', { delay: 600 });
+    srtop.reveal('.home .social-icons', { delay: 600 });
+
+    /* SCROLL ABOUT */
+    srtop.reveal('.about .image', { delay: 500 });
+    srtop.reveal('.about .content h3', { delay: 500 });
+    srtop.reveal('.about .content .tag', { delay: 600 });
+    srtop.reveal('.about .content p', { delay: 700 });
+    srtop.reveal('.about .content .box-container', { delay: 700 });
+    srtop.reveal('.about .content .resumebtn', { delay: 900 });
+
+
+    /* SCROLL EDUCATION */
+    srtop.reveal('.education .box', { interval: 200 });
+
+    /* SCROLL SKILLS */
+    srtop.reveal('.skills .container', { interval: 200 });
+
+    /* SCROLL WORK */
+    srtop.reveal('.work .box', { interval: 200 });
+
+    /* SCROLL EXPERIENCE */
+    srtop.reveal('.experience .timeline', { delay: 400 });
+    srtop.reveal('.experience .timeline .container', { interval: 400 });
+
+    /* SCROLL CONTACT */
+    srtop.reveal('.contact .container', { delay: 400 });
+    srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+    /**chnages made**/
 });
 
 document.addEventListener('visibilitychange',
@@ -89,58 +139,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
     speed: 400
 });
 // <!-- vanilla tilt js effect ends -->
-
-// <!-- scroll reveal anim starts -->
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
-
-srtop.reveal('.home .image', { delay: 300 });
-srtop.reveal('.home .linkedin', { delay: 600 });
-srtop.reveal('.home .github', { delay: 700 });
-srtop.reveal('.home .twitter', { delay: 800 });
-srtop.reveal('.home .googlescholar', { delay: 900 });
-srtop.reveal('.home .facebook', { delay: 1000 });
-// srtop.reveal('.home .instagram', { delay: 1100 });
-srtop.reveal('.home .socials', { delay: 600 });
-srtop.reveal('.home .social-icons', { delay: 600 });
-
-/* SCROLL ABOUT */
-srtop.reveal('.about .image', { delay: 500 });
-srtop.reveal('.about .content h3', { delay: 500 });
-srtop.reveal('.about .content .tag', { delay: 600 });
-srtop.reveal('.about .content p', { delay: 700 });
-srtop.reveal('.about .content .box-container', { delay: 700 });
-srtop.reveal('.about .content .resumebtn', { delay: 900 });
-
-
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
-
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-
-/* SCROLL WORK */
-srtop.reveal('.work .box', { interval: 200 });
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
-
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
-
-/**chnages made**/
-
 
 /* ===== SCROLL top button===== */
 $(window).scroll(function(){
