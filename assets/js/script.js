@@ -350,25 +350,39 @@ function appendMessage(message, type) {
 function getBotResponse(userMessage) {
     const lowerCaseMessage = userMessage.toLowerCase();
 
-    // Keyword-based responses
-    if (lowerCaseMessage.includes('skill')) {
-        return "Chaitanya's skills include Languages (Python, Java, JavaScript), Web & App Development (Next.js, React, Node.js, MongoDB), AI/ML/Data Science (Scikit-learn, Pandas, NumPy), Cybersecurity, Computer Vision, and various Tools & Platforms (Git, GitHub, VS Code, etc.).";
-    } else if (lowerCaseMessage.includes('education')) {
-        return "Chaitanya is pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning at R. C. Patel Institute of Technology, Shirpur. He also completed his HSC and SSC from R. C. Patel institutions.";
-    } else if (lowerCaseMessage.includes('project')) {
-        return "Chaitanya has projects in Machine Learning, Web Development, Mobile Development, and Blockchain. You can find more details in the Projects section of the portfolio.";
-    } else if (lowerCaseMessage.includes('contact')) {
-        return "You can get in touch with Chaitanya via email at chaitanyasonaje0205@gmail.com, phone at +91 80100 83340, or connect with him on social media like LinkedIn, GitHub, Instagram, and Kaggle. You can also use the contact form on the website.";
-    } else if (lowerCaseMessage.includes('about')) {
-        return "Chaitanya is an AI & ML undergraduate based in Maharashtra, India. He is passionate about coding and developing innovative projects in AI, ML, and web development.";
-    } else if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')) {
-        return "Hello! How can I help you today?";
-    } else if (lowerCaseMessage.includes('name')) {
-        return "I am a chatbot here to assist you with questions about Chaitanya's portfolio.";
-    } else if (lowerCaseMessage.includes('thank')) {
-        return "You're welcome!";
-    } else {
-        return "I'm sorry, I don't understand that. I can tell you about Chaitanya's skills, education, projects, about him, or how to contact him.";
+    // Responses for greetings
+    if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi') || lowerCaseMessage.includes('hey')) {
+        return "Hello! I'm here to help you navigate Chaitanya's portfolio. What would you like to know about him?";
+    } else if (lowerCaseMessage.includes('how are you')) {
+        return "I'm a bot, so I don't have feelings, but I'm ready to assist you! How can I help?";
+    } else if (lowerCaseMessage.includes('your name')) {
+        return "I am a chatbot designed to answer questions about Chaitanya Sonaje's portfolio. You can ask me about his skills, education, projects, or how to contact him.";
+    } else if (lowerCaseMessage.includes('thank you') || lowerCaseMessage.includes('thanks')) {
+        return "You're most welcome! Is there anything else I can assist you with?";
     }
+
+    // Responses for specific sections/information
+    if (lowerCaseMessage.includes('skill') || lowerCaseMessage.includes('expertise') || lowerCaseMessage.includes('proficient')) {
+        return "Chaitanya possesses a diverse skill set! His expertise includes: <ul><li><b>Languages:</b> Python, Java, JavaScript, TypeScript, HTML, CSS, SQL, PL/SQL</li><li><b>Web & App Development:</b> Next.js, React.js, Node.js, Flask, MongoDB, REST APIs</li><li><b>AI/Machine Learning/Data Science:</b> Scikit-learn, Pandas, NumPy, Matplotlib, OpenCV, Tesseract OCR</li><li><b>Cybersecurity & Cryptography:</b> AES, DES, RC4, Blowfish, SHA-256, Web3 Concepts</li><li><b>Computer Vision/OCR/Smart Systems:</b> OpenCV, AR.js, Tesseract OCR, ANPR, Image Preprocessing, Real-time Processing</li><li><b>Tools & Platforms:</b> Git, GitHub, VS Code</li></ul> He's always keen to learn new technologies!";
+    } else if (lowerCaseMessage.includes('education') || lowerCaseMessage.includes('study') || lowerCaseMessage.includes('college') || lowerCaseMessage.includes('school')) {
+        return "Chaitanya is currently pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning at R. C. Patel Institute of Technology, Shirpur. He also completed his HSC and SSC from R. C. Patel institutions, laying a strong foundation for his technical journey.";
+    } else if (lowerCaseMessage.includes('project') || lowerCaseMessage.includes('work') || lowerCaseMessage.includes('portfolio') || lowerCaseMessage.includes('developed')) {
+        return "Chaitanya has undertaken a variety of exciting projects across different domains. His portfolio showcases work in: <ul><li><b>Machine Learning:</b> Building intelligent models and systems.</li><li><b>Web Development:</b> Creating dynamic and responsive web applications.</li><li><b>Mobile Development:</b> Developing user-friendly mobile apps.</li><li><b>Blockchain:</b> Exploring decentralized applications.</li></ul> You can delve into the details of each project in the 'Work' or 'Projects' section of his portfolio.";
+    } else if (lowerCaseMessage.includes('contact') || lowerCaseMessage.includes('reach out') || lowerCaseMessage.includes('email') || lowerCaseMessage.includes('phone') || lowerCaseMessage.includes('social media')) {
+        return "You can easily connect with Chaitanya! Here are a few ways: <ul><li><b>Email:</b> chaitanyasonaje0205@gmail.com</li><li><b>Phone:</b> +91 80100 83340</li><li><b>Social Media:</b> Find him on LinkedIn, GitHub, Instagram, and Kaggle.</li></ul> Don't hesitate to use the dedicated contact form on the website for direct inquiries!";
+    } else if (lowerCaseMessage.includes('about') || lowerCaseMessage.includes('who is chaitanya') || lowerCaseMessage.includes('background')) {
+        return "Chaitanya Sonaje is an aspiring AI & ML Engineer based in Maharashtra, India. He's passionate about leveraging his coding skills to develop innovative solutions in AI, Machine Learning, and web development. He's constantly learning and working on projects to enhance his capabilities and explore new horizons in technology.";
+    } else if (lowerCaseMessage.includes('experience')) {
+        return "Chaitanya's experience spans across various projects and learning endeavors in AI, ML, and web development. While he is currently an undergraduate, he has hands-on experience building web apps, machine learning models, and full-stack applications.";
+    } else if (lowerCaseMessage.includes('resume') || lowerCaseMessage.includes('cv')) {
+        return "You can view or download Chaitanya's resume directly from the 'About Me' section of the portfolio. It provides a comprehensive overview of his academic background, skills, and projects.";
+    } else if (lowerCaseMessage.includes('hobbies') || lowerCaseMessage.includes('interests')) {
+        return "Beyond coding, Chaitanya enjoys exploring new technologies, contributing to open-source projects, and continuously expanding his knowledge base in AI and web development.";
+    } else if (lowerCaseMessage.includes('thank you') || lowerCaseMessage.includes('thanks')) {
+        return "You're most welcome! Feel free to ask if you have any more questions.";
+    }
+
+    // Fallback response
+    return "I'm sorry, I don't quite understand that. I can provide information about Chaitanya's skills, education, projects, about him, how to contact him, or his experience. Could you please rephrase your question?";
 }
 // <!-- Chatbot JavaScript ends -->
