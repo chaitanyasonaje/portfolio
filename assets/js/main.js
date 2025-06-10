@@ -72,8 +72,8 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-// Initialize particles.js
-particlesJS('particles-js', {
+// Initialize particles.js for all sections
+const particlesConfig = {
     particles: {
         number: {
             value: 80,
@@ -139,4 +139,11 @@ particlesJS('particles-js', {
         }
     },
     retina_detect: true
+};
+
+// Initialize particles for all sections
+['particles-js', 'particles-js-about', 'particles-js-skills', 'particles-js-education', 'particles-js-work', 'particles-js-contact'].forEach(id => {
+    if (document.getElementById(id)) {
+        particlesJS(id, particlesConfig);
+    }
 }); 
