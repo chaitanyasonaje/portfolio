@@ -107,6 +107,42 @@ $(document).ready(function () {
     srtop.reveal('.contact .container .form-group', { delay: 400 });
 
     /**chnages made**/
+
+    // Typing animation
+    const typingText = document.querySelector('.typing-text');
+    const words = ['AI & ML Engineer', 'Full Stack Developer', 'Data Scientist', 'Programmer'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingDelay = 100;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typingDelay = 50;
+        } else {
+            typingText.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typingDelay = 100;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            isDeleting = true;
+            typingDelay = 2000; // Pause at end of word
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typingDelay = 500; // Pause before typing next word
+        }
+
+        setTimeout(type, typingDelay);
+    }
+
+    // Start typing animation
+    setTimeout(type, 1000);
 });
 
 document.addEventListener('visibilitychange',
@@ -127,8 +163,12 @@ var typed = new Typed(".typing-text", {
     strings: ["AI & ML Engineer", "Full Stack Developer", "Data Scientist", "Programmer"],
     loop: true,
     typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
+    backSpeed: 30,
+    backDelay: 2000,
+    startDelay: 1000,
+    cursorChar: '|',
+    autoInsertCss: true,
+    smartBackspace: true
 });
 // <!-- typed js effect ends -->
 };

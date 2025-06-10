@@ -54,44 +54,6 @@ document.querySelectorAll('.skill-category, .project-item, .education .box, .com
     observer.observe(el);
 });
 
-// Typing animation
-const typingText = document.querySelector('.typing-text');
-const words = ['AI & ML Engineer', 'Full Stack Developer', 'Problem Solver'];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingDelay = 100;
-
-function type() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-        typingDelay = 50;
-    } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-        typingDelay = 100;
-    }
-
-    if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        typingDelay = 1500; // Pause at end of word
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        typingDelay = 500; // Pause before typing next word
-    }
-
-    setTimeout(type, typingDelay);
-}
-
-// Start typing animation when page loads
-window.addEventListener('load', () => {
-    setTimeout(type, 1000);
-});
-
 // Scroll to top button
 const scrollTopBtn = document.querySelector('#scroll-top');
 
