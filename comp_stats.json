@@ -23,8 +23,8 @@
     "platform": "Kaggle",
     "logo_icon": "fab fa-kaggle",
     "stats": [
-      {"icon": "fas fa-trophy", "value": "2", "label": "Total Competitions"},
-      {"icon": "fas fa-code", "value": "2", "label": "Public Notebooks"},
+      {"icon": "fas fa-trophy", "value": "7", "label": "Total Competitions"},
+      {"icon": "fas fa-code", "value": "9", "label": "Public Notebooks"},
       {"icon": "fas fa-database", "value": "2", "label": "Public Datasets"}
     ],
     "link": "https://www.kaggle.com/chaitanya205"
