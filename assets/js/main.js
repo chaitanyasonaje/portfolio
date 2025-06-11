@@ -1,3 +1,23 @@
+// Loading Animation Handler
+function handleLoadingAnimation() {
+    const loaderContainer = document.querySelector('.loader-container');
+    
+    // Hide loader when all resources are loaded
+    window.addEventListener('load', () => {
+        // Add a small delay to ensure smooth transition
+        setTimeout(() => {
+            loaderContainer.classList.add('fade-out');
+            // Remove loader from DOM after animation
+            setTimeout(() => {
+                loaderContainer.remove();
+            }, 500);
+        }, 500);
+    });
+}
+
+// Initialize loading animation
+handleLoadingAnimation();
+
 // Mobile menu functionality
 const menuBtn = document.querySelector('#menu');
 const navbar = document.querySelector('.navbar');
@@ -36,7 +56,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.05  // Lower threshold for earlier triggering
+    threshold: 0.15
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -48,13 +68,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for fade-in animation and ensure initial visibility
+// Observe elements for fade-in animation
 document.querySelectorAll('.skill-category, .project-item, .education .box, .competitive-card, .about .row .content').forEach(el => {
     el.classList.add('fade-out');
-    // Add a small delay to ensure initial visibility
-    setTimeout(() => {
-        observer.observe(el);
-    }, 100);
+    observer.observe(el);
 });
 
 // Scroll to top button
@@ -87,7 +104,7 @@ function initializeParticles() {
                 }
             },
             color: {
-                value: '#00c6ff'
+                value: '#64ffda'
             },
             shape: {
                 type: 'circle'
@@ -103,7 +120,7 @@ function initializeParticles() {
             line_linked: {
                 enable: true,
                 distance: 150,
-                color: '#00c6ff',
+                color: '#64ffda',
                 opacity: 0.4,
                 width: 1
             },
@@ -153,7 +170,6 @@ function initializeParticles() {
                 particlesJS(id, particlesConfig);
             } catch (error) {
                 console.warn(`Failed to initialize particles for ${id}:`, error);
-                // Remove the particles container if initialization fails
                 element.style.display = 'none';
             }
         }
