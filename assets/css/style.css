@@ -181,7 +181,7 @@ section {
   padding: 2rem 9%;
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 1; /* Ensure sections create a stacking context */
   background: var(--background);
 }
 .heading {
@@ -192,7 +192,7 @@ section {
   text-align: center;
   margin-bottom: 4rem;
   position: relative;
-  z-index: 2;
+  z-index: 10; /* Set a higher z-index for headings */
 }
 .heading span {
   color: var(--primary-color);
@@ -1701,19 +1701,13 @@ header .navbar ul li a.active {
 .work .box-container,
 .contact .container {
   position: relative;
-  z-index: 2;
+  z-index: 10; /* Set a higher z-index to bring content to the front */
 }
 
 /* Ensure headings appear above particles */
 .heading {
   position: relative;
-  z-index: 2;
-}
-
-/* Ensure sections have proper positioning context */
-section {
-  position: relative;
-  overflow: hidden;
+  z-index: 10; /* Set a higher z-index for headings */
 }
 
 /* Chatbot Styles */
