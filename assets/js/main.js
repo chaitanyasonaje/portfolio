@@ -35,6 +35,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Close mobile menu when clicking a link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -45,9 +53,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            // Close mobile menu after clicking a link
-            menuBtn.classList.remove('active');
-            navbar.classList.remove('active');
         }
     });
 });
