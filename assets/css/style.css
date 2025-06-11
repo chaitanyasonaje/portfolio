@@ -180,9 +180,12 @@ section {
   min-height: 100vh;
   padding: 2rem 9%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
   background: var(--background);
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .heading {
   font-size: 3.5rem;
@@ -193,6 +196,9 @@ section {
   margin-bottom: 4rem;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .heading span {
   color: var(--primary-color);
@@ -572,6 +578,9 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .about .row {
@@ -583,6 +592,11 @@ header .navbar ul li a.active {
   max-width: 120rem;
   margin: 0 auto;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .about .row .image {
@@ -610,6 +624,11 @@ header .navbar ul li a.active {
   flex: 1 1 45rem; /* Adjusted flex basis */
   padding: 0; /* Remove padding */
   color: var(--light-text); /* Default content text color */
+  position: relative;
+  z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .about .row .content h3 {
@@ -752,6 +771,9 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .skills .container {
@@ -794,6 +816,9 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .education .heading {
@@ -952,6 +977,9 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .work .container {
@@ -1238,6 +1266,9 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .contact .container {
@@ -1691,6 +1722,7 @@ header .navbar ul li a.active {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  opacity: 0.5;
 }
 
 /* Ensure content appears above particles */

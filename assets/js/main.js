@@ -199,9 +199,102 @@ function loadParticlesJS() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        // Ensure all sections are visible
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'block';
+            section.style.visibility = 'visible';
+            section.style.opacity = '1';
+        });
+
+        // Initialize particles with reduced density
+        const particlesConfig = {
+            particles: {
+                number: {
+                    value: 50, // Reduced from 80
+                    density: {
+                        enable: true,
+                        value_area: 1000 // Increased from 800
+                    }
+                },
+                color: {
+                    value: '#64ffda'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.3, // Reduced from 0.5
+                    random: false
+                },
+                size: {
+                    value: 2, // Reduced from 3
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#64ffda',
+                    opacity: 0.2, // Reduced from 0.4
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5, // Reduced from 2
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.5 // Reduced from 1
+                        }
+                    },
+                    push: {
+                        particles_nb: 3 // Reduced from 4
+                    }
+                }
+            },
+            retina_detect: true
+        };
+
         await loadParticlesJS();
-        initializeParticles();
+        
+        // Initialize particles for all sections with error handling
+        ['particles-js', 'particles-js-about', 'particles-js-skills', 'particles-js-education', 'particles-js-work', 'particles-js-contact'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                try {
+                    particlesJS(id, particlesConfig);
+                } catch (error) {
+                    console.warn(`Failed to initialize particles for ${id}:`, error);
+                    element.style.display = 'none';
+                }
+            }
+        });
+
+        // Force a reflow to ensure sections are visible
+        document.body.style.display = 'none';
+        document.body.offsetHeight; // Force reflow
+        document.body.style.display = '';
     } catch (error) {
-        console.warn('Failed to load particles.js:', error);
+        console.warn('Failed to initialize:', error);
     }
 }); 
