@@ -1,37 +1,4 @@
 $(document).ready(function () {
-    // Initialize all sections
-    $('section').each(function() {
-        $(this).css('opacity', '1');
-        $(this).css('visibility', 'visible');
-    });
-
-    // Ensure particles.js is properly initialized
-    if (typeof particlesJS !== 'undefined') {
-        ['particles-js', 'particles-js-about', 'particles-js-skills', 'particles-js-education', 'particles-js-work', 'particles-js-competitive', 'particles-js-contact'].forEach(id => {
-            const element = document.getElementById(id);
-            if (element) {
-                particlesJS(id, {
-                    particles: {
-                        number: { value: 80 },
-                        color: { value: '#64ffda' },
-                        opacity: { value: 0.5 },
-                        size: { value: 3 },
-                        line_linked: {
-                            enable: true,
-                            distance: 150,
-                            color: '#64ffda',
-                            opacity: 0.4,
-                            width: 1
-                        },
-                        move: {
-                            enable: true,
-                            speed: 2
-                        }
-                    }
-                });
-            }
-        });
-    }
 
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
