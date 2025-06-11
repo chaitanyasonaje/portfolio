@@ -180,13 +180,59 @@ section {
   min-height: 100vh;
   padding: 2rem 9%;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   z-index: 1;
   background: var(--background);
-  display: block;
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
+  display: block;
 }
+
+section .container,
+section .row {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+}
+
+#particles-js,
+#particles-js-about,
+#particles-js-skills,
+#particles-js-education,
+#particles-js-work,
+#particles-js-competitive,
+#particles-js-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about,
+.skills,
+.education,
+.work,
+.competitive,
+.contact {
+  position: relative;
+  z-index: 2;
+  background: var(--background);
+}
+
+.about .row,
+.skills .container,
+.education .box-container,
+.work .container,
+.competitive .container,
+.contact .container {
+  position: relative;
+  z-index: 3;
+}
+
 .heading {
   font-size: 3.5rem;
   font-weight: 700;
@@ -196,9 +242,6 @@ section {
   margin-bottom: 4rem;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 .heading span {
   color: var(--primary-color);
@@ -578,9 +621,6 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .about .row {
@@ -592,11 +632,6 @@ header .navbar ul li a.active {
   max-width: 120rem;
   margin: 0 auto;
   align-items: center;
-  position: relative;
-  z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .about .row .image {
@@ -624,11 +659,6 @@ header .navbar ul li a.active {
   flex: 1 1 45rem; /* Adjusted flex basis */
   padding: 0; /* Remove padding */
   color: var(--light-text); /* Default content text color */
-  position: relative;
-  z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .about .row .content h3 {
@@ -771,9 +801,6 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .skills .container {
@@ -816,9 +843,6 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .education .heading {
@@ -977,9 +1001,6 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .work .container {
@@ -1266,9 +1287,6 @@ header .navbar ul li a.active {
   padding: 8rem 0;
   position: relative;
   z-index: 2;
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .contact .container {
@@ -1720,9 +1738,8 @@ header .navbar ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
-  opacity: 0.5;
 }
 
 /* Ensure content appears above particles */
