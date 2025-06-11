@@ -36,7 +36,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.05  // Lower threshold for earlier triggering
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -48,10 +48,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for fade-in animation
-document.querySelectorAll('.skill-category, .project-item, .education .box, .competitive-card').forEach(el => {
+// Observe elements for fade-in animation and ensure initial visibility
+document.querySelectorAll('.skill-category, .project-item, .education .box, .competitive-card, .about .row .content').forEach(el => {
     el.classList.add('fade-out');
-    observer.observe(el);
+    // Add a small delay to ensure initial visibility
+    setTimeout(() => {
+        observer.observe(el);
+    }, 100);
 });
 
 // Scroll to top button
@@ -74,89 +77,110 @@ scrollTopBtn.addEventListener('click', () => {
 
 // Function to initialize particles
 function initializeParticles() {
-    // Small delay to ensure all resources are loaded
-    setTimeout(() => {
-        const particlesConfig = {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: '#00c6ff'
-                },
-                shape: {
-                    type: 'circle'
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false
-                },
-                size: {
-                    value: 3,
-                    random: true
-                },
-                line_linked: {
+    const particlesConfig = {
+        particles: {
+            number: {
+                value: 80,
+                density: {
                     enable: true,
-                    distance: 150,
-                    color: '#00c6ff',
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false
+                    value_area: 800
                 }
             },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'grab'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    push: {
-                        particles_nb: 4
-                    }
-                }
+            color: {
+                value: '#00c6ff'
             },
-            retina_detect: true
-        };
-
-        // Initialize particles for all sections
-        ['particles-js', 'particles-js-about', 'particles-js-skills', 'particles-js-education', 'particles-js-work', 'particles-js-contact'].forEach(id => {
-            if (document.getElementById(id)) {
-                particlesJS(id, particlesConfig);
+            shape: {
+                type: 'circle'
+            },
+            opacity: {
+                value: 0.5,
+                random: false
+            },
+            size: {
+                value: 3,
+                random: true
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#00c6ff',
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
             }
-        });
-    }, 100); // 100ms delay
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: 'grab'
+                },
+                onclick: {
+                    enable: true,
+                    mode: 'push'
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 140,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                push: {
+                    particles_nb: 4
+                }
+            }
+        },
+        retina_detect: true
+    };
+
+    // Initialize particles for all sections with error handling
+    ['particles-js', 'particles-js-about', 'particles-js-skills', 'particles-js-education', 'particles-js-work', 'particles-js-contact'].forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            try {
+                particlesJS(id, particlesConfig);
+            } catch (error) {
+                console.warn(`Failed to initialize particles for ${id}:`, error);
+                // Remove the particles container if initialization fails
+                element.style.display = 'none';
+            }
+        }
+    });
 }
 
-// Initialize particles when DOM is loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeParticles);
-} else {
-    // DOM already loaded, initialize immediately
-    initializeParticles();
-} 
+// Ensure particles.js is loaded before initialization
+function loadParticlesJS() {
+    return new Promise((resolve, reject) => {
+        if (window.particlesJS) {
+            resolve();
+        } else {
+            const script = document.createElement('script');
+            script.src = './assets/js/particles.min.js';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        }
+    });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        await loadParticlesJS();
+        initializeParticles();
+    } catch (error) {
+        console.warn('Failed to load particles.js:', error);
+    }
+}); 

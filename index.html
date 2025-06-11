@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="chaitanya sonaje, portfolio, chaitanya, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Chaitanya's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./assets/css/style.css" as="style">
+    <link rel="preload" href="./assets/js/particles.min.js" as="script">
+    <link rel="preload" href="./assets/js/main.js" as="script">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Font Awesome - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Chaitanya Sonaje</title>
-    <!-- Isotope JS -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
+    <!-- Isotope JS - Load asynchronously -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
+    
+    <!-- Critical JavaScript -->
+    <script src="./assets/js/particles.min.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
 <body oncontextmenu="return false">
 
