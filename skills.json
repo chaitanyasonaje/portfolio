@@ -1,103 +1,92 @@
 [
-    {
-        "name": "Python",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/python/python-original.svg"
-    },
-    {
-        "name": "Flask",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/flask/flask-original.svg"
-    },
-    {
-        "name": "FastAPI",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
-    },
-    {
-        "name": "Next.js",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/nextjs/nextjs-original.svg"
-    },
-    {
-        "name": "React.js",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/react/react-original.svg"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/mongodb/mongodb-original.svg"
-    },
-    {
-        "name": "Firebase",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/firebase/firebase-plain.svg"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/mysql/mysql-original.svg"
-    },
-    {
-        "name": "Git",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/git/git-original.svg"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/github/github-original.svg"
-    },
-    {
-        "name": "VS Code",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/vscode/vscode-original.svg"
-    },
-    {
-        "name": "Jupyter Notebook",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg"
-    },
-    {
-        "name": "Figma",
-        "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/figma/figma-original.svg"
-    },
-    {
-        "name": "Canva",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
-    },
-    {
-        "name": "Google Colab",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg"
-    },
-    {
-        "name": "Scikit-learn",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
-    },
-    {
-        "name": "Pandas",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
-    },
-    {
-        "name": "NumPy",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
-    },
-    {
-        "name": "Matplotlib",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
-    },
- 
-    {
-        "name": "TensorFlow",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
-    },
-    {
-        "name": "Keras",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg"
-    },
-    {
-        "name": "OpenCV",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
-    },
-
-
-    {
-        "name": "Netlify",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
-    },
-
-  
-    {
-        "name": "Clerk",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/clerk/clerk-original.svg"
-    }
+  {
+    "name": "OpenAI & Gemini API",
+    "category": "aiml",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/python/python-original.svg"
+  },
+  {
+    "name": "LangChain & Prompt Eng.",
+    "category": "aiml",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg"
+  },
+  {
+    "name": "Scikit-learn",
+    "category": "aiml",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+  },
+  {
+    "name": "Computer Vision & OCR",
+    "category": "aiml",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
+  },
+  {
+    "name": "Pandas & NumPy",
+    "category": "aiml",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+  },
+  {
+    "name": "React.js",
+    "category": "web",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/react/react-original.svg"
+  },
+  {
+    "name": "Next.js",
+    "category": "web",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/nextjs/nextjs-original.svg"
+  },
+  {
+    "name": "Node.js & Express.js",
+    "category": "web",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/nodejs/nodejs-original.svg"
+  },
+  {
+    "name": "FastAPI & Flask",
+    "category": "web",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+  },
+  {
+    "name": "TypeScript",
+    "category": "languages",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/typescript/typescript-original.svg"
+  },
+  {
+    "name": "JavaScript (ES6+)",
+    "category": "languages",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/javascript/javascript-original.svg"
+  },
+  {
+    "name": "Python",
+    "category": "languages",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/python/python-original.svg"
+  },
+  {
+    "name": "MongoDB & Mongoose",
+    "category": "web",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/mongodb/mongodb-original.svg"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "web",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/postgresql/postgresql-original.svg"
+  },
+  {
+    "name": "NextAuth.js & Clerk",
+    "category": "tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/clerk/clerk-original.svg"
+  },
+  {
+    "name": "Vercel & Netlify",
+    "category": "tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+  },
+  {
+    "name": "Git & GitHub",
+    "category": "tools",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/git/git-original.svg"
+  },
+  {
+    "name": "Postman & VS Code",
+    "category": "tools",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/vscode/vscode-original.svg"
+  }
 ]

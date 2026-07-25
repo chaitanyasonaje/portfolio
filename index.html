@@ -2,487 +2,590 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="chaitanya sonaje, portfolio, chaitanya, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Chaitanya's Portfolio. Full-Stack Web Developer and Android App Developer" />
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="./assets/css/style.css" as="style">
-    <link rel="preload" href="./assets/js/particles.min.js" as="script">
-    <link rel="preload" href="./assets/js/main.js" as="script">
-    
+    <meta name="keywords" content="Chaitanya Sandip Sonaje, Chaitanya Sonaje, Portfolio, AI Full Stack Engineer, AI ML Engineer, MERN Developer, React Developer, FastAPI, Nashik, RCPIT Shirpur" />
+    <meta name="description" content="Chaitanya Sandip Sonaje - AI Full-Stack Engineer & B.Tech AI/ML Engineering graduate from Nashik, Maharashtra. View 3D interactive portfolio, projects, skills, and experience." />
+    <title>Chaitanya Sandip Sonaje | AI Full-Stack Engineer & 3D Interactive Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    
-    <!-- Font Awesome - Load asynchronously -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
-    
+
     <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>Portfolio | Chaitanya Sonaje</title>
-    
-    <!-- Isotope JS - Load asynchronously -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="./assets/js/three-hero.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
-<body oncontextmenu="return false">
+<body>
+
+    <!-- 3D Motion Background Canvas -->
+    <div id="three-canvas-container"></div>
+
     <!-- Loading Animation -->
-    <div class="loader-container">
-        <div class="loader"></div>
-        <div class="welcome-text">Welcome to My Portfolio</div>
-        <div class="loader-text">Loading amazing content...</div>
+    <div class="loader-container" id="loader-container">
+        <div class="spinner-3d"></div>
+        <div class="loader-text">INITIALIZING 3D UNIVERSE...</div>
     </div>
 
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><i class="fas fa-code"></i> Chaitanya</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#competitive">Extracurricular Activities</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-    <h2>Hi There,<br/> I'm <span>Chaitanya</span> <span>Sonaje</span></h2>
-    <p>i am <span class="typing-text" id="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/chaitanya-sonaje-9a3293257/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/chaitanyasonaje" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="email" aria-label="Mail" href="mailto:chaitanyasonaje0205@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/chaitanya_sonaje_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-          <li><a class="kaggle" aria-label="Kaggle" href="https://www.kaggle.com/chaitanya205" target="_blank"><i class="fab fa-kaggle"></i></a></li>
-        </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
-</div>
-</section>
-<!-- hero section ends -->
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-    <div id="particles-js-about"></div>
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
-    <div class="row">
-
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
-    </div>
-    <div class="content">
-        <h3>I'm Chaitanya</h3>
-        <span class="tag">AI & ML Engineer</span>
-        
-<p>I am an Artificial Intelligence and Machine Learning undergraduate based in Maharashtra, India.  
-  I am pursuing a BTech in Artificial Intelligence and Machine Learning at RCPIT, Shirpur.  
-  I am very passionate about enhancing my coding skills and developing innovative projects in AI, ML, and web development.  
-  I build web apps, machine learning models, and full-stack applications using technologies like MERN Stack and Python.  
-  Constantly learning and working on projects to improve my skills.  
-  Love to explore and implement AI-driven solutions.  
-</p>
-
-        
-        <div class="box-container">
-            <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-            <div class="box">
-              <p><span> email : </span> chaitanyasonaje0205@gmail.com</p>
-              <p><span> place : </span> Boradi(Shirpur), India - 425428</p>
-            </div>
-        </div>
-        
-        <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1X--VM3NirQHpKGNMXskLAHpYn5dd25pR/view?usp=sharing" target="_blank" class="btn" style="margin-right: 1.5rem;"><span>View Resume</span>
-                <i class="fas fa-chevron-right"></i>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-terminal"></i>
+                <span>Chaitanya<span class="gradient-text">.dev</span></span>
             </a>
-            <a href="https://drive.google.com/uc?export=download&id=1X--VM3NirQHpKGNMXskLAHpYn5dd25pR" target="_blank" class="btn"><span>Download Resume</span>
-                <i class="fas fa-download"></i>
-            </a>
-        </div>
 
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="audio-toggle" class="audio-btn" aria-label="Toggle Audio FX">
+                    <i class="fas fa-volume-up"></i>
+                    <span>Cyber Audio: OFF</span>
+                </button>
+                <a href="#contact" class="hire-pill-btn">
+                    <span class="status-dot"></span>
+                    <span>Open for Hire</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="status-dot"></span>
+                        <span>AI Full Stack Engineer | Open for Full-Time Roles & Freelance</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Chaitanya Sandip</span><br/>
+                        Sonaje
+                    </h1>
+
+                    <div class="hero-typing-box">
+                        I am an <span class="typing-text" id="typing-text"></span>
+                    </div>
+
+                    <p class="hero-description">
+                        AI Full Stack Engineer based in Nashik, Maharashtra. Specializing in MERN & Next.js applications, LLM API integrations (OpenAI & Gemini), machine learning diagnostic systems, and scalable backend microservices.
+                    </p>
+
+                    <!-- Interactive Counter Stats Row -->
+                    <div class="hero-stats-row">
+                        <div class="stat-card">
+                            <span class="counter-val" data-target="93.2" data-suffix="%">0%</span>
+                            <span class="stat-label">Stroke AI Acc</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="counter-val" data-target="94" data-suffix="%">0%</span>
+                            <span class="stat-label">CryptoScan Acc</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="counter-val" data-target="20" data-suffix="+">0+</span>
+                            <span class="stat-label">Live Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="counter-val" data-target="7.30" data-suffix=" CGPA">0</span>
+                            <span class="stat-label">B.Tech AI & ML</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn-primary">
+                            <span>View Experience & Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1KeCFu6BiGFga5BWomMlp8gCV6hII096f/view" target="_blank" class="btn-glass">
+                            <span>View Resume</span>
+                            <i class="fas fa-file-download"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-icons-row">
+                        <a href="https://github.com/chaitanyasonaje" target="_blank" class="social-icon-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/chaitanya-sonaje-9a3293257/" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:chaitanyasonaje0205@gmail.com" class="social-icon-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+918010083340" class="social-icon-btn" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.kaggle.com/chaitanya205" target="_blank" class="social-icon-btn" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-3d-card">
+                    <div class="hero-floating-badge badge-top-right">
+                        <i class="fas fa-brain" style="color: var(--primary-cyan);"></i>
+                        <span>Deep Learning & ML</span>
+                    </div>
+
+                    <div class="hero-floating-badge badge-bottom-left">
+                        <i class="fas fa-layer-group" style="color: var(--primary-violet);"></i>
+                        <span>MERN & Next.js</span>
+                    </div>
+
+                    <div class="glass-profile-frame">
+                        <div class="profile-img-inner">
+                            <img src="./assets/images/profile2.jpg" alt="Chaitanya Sandip Sonaje">
+                        </div>
+                        <div class="hero-floating-tag">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <div class="tag-title">Specialization</div>
+                                <div class="tag-val">B.Tech AI & ML (7.30 CGPA)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">AI & Full-Stack <span class="gradient-text">Craftsmanship</span></h2>
+                <p class="section-subtitle">Combining cutting-edge AI integration with robust MERN & Cloud architecture.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="hero-3d-card">
+                    <div class="glass-profile-frame" style="height: 380px; width: 300px;">
+                        <div class="profile-img-inner">
+                            <img src="./assets/images/hero.png" alt="Chaitanya Developer Setup">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-glass-card">
+                    <p class="about-bio">
+                        I am an <strong>AI Full Stack Engineer</strong> and B.Tech graduate in <strong>Artificial Intelligence & Machine Learning Engineering</strong> from R. C. Patel Institute of Technology, Shirpur.
+                    </p>
+                    <p class="about-bio">
+                        I have hands-on experience building enterprise MERN stack applications for government clients, integrating LLM APIs (OpenAI, Gemini), engineering 94%+ accurate ML classification models, and publishing peer-reviewed AI research in IJRASET (DOI: 10.22214/ijraset.2026.83023).
+                    </p>
+
+                    <div class="info-highlights-grid">
+                        <div class="info-box">
+                            <span>Degree</span>
+                            <strong>B.Tech AI & ML (7.30 CGPA)</strong>
+                        </div>
+                        <div class="info-box">
+                            <span>Location</span>
+                            <strong>Nashik, Maharashtra</strong>
+                        </div>
+                        <div class="info-box">
+                            <span>Phone</span>
+                            <strong>+91-8010083340</strong>
+                        </div>
+                        <div class="info-box">
+                            <span>Email</span>
+                            <strong>chaitanyasonaje0205@gmail.com</strong>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#contact" class="btn-primary">
+                            <span>Get in Touch</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1KeCFu6BiGFga5BWomMlp8gCV6hII096f" target="_blank" class="btn-glass">
+                            <span>Download Resume</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Work Experience</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+                <p class="section-subtitle">Real-world industry engineering roles and impact.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2026 – Jun 2026</span>
+                        <h3 class="timeline-title">AI Full Stack Engineer</h3>
+                        <p class="timeline-subtitle">The Innovative Solutions</p>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; padding-left: 1rem; list-style-type: disc;">
+                            <li>Integrated AI-powered capabilities using LLM APIs (OpenAI / Gemini) and 3rd-party services to automate workflows and optimize user experience.</li>
+                            <li>Developed and deployed full-stack web applications using MERN stack (MongoDB, Express.js, React.js, Node.js) for government and enterprise clients.</li>
+                            <li>Built responsive user interfaces with React.js & Tailwind CSS and designed secure RESTful APIs & backend services using Node.js & Express.js.</li>
+                            <li>Deployed applications to cloud environments, optimized performance, and collaborated using Git & Agile methodologies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun 2025 – Aug 2025</span>
+                        <h3 class="timeline-title">Cybersecurity & Ethical Hacking Intern</h3>
+                        <p class="timeline-subtitle">Digisuraksha Parhari Foundation</p>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; padding-left: 1rem; list-style-type: disc;">
+                            <li>Executed security protocol analysis, vulnerability assessment, and ethical hacking practices to safeguard network infrastructure.</li>
+                            <li>Gained hands-on experience in penetration testing, threat detection, and digital security auditing techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-cogs"></i> Freelance & Client Services</span>
+                <h2 class="section-title">What I Can <span class="gradient-text">Build For You</span></h2>
+                <p class="section-subtitle">Turn your vision into reality with modern tech, slick 3D visuals, and production-ready code.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full-Stack MERN & Next.js Apps</h3>
+                    <p>Scalable web applications built with MongoDB, Express.js, React.js, Node.js, Next.js, TypeScript, and Tailwind CSS.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Enterprise & Government Web Apps</li>
+                        <li><i class="fas fa-check"></i> RESTful APIs & Backend Architecture</li>
+                        <li><i class="fas fa-check"></i> NextAuth.js & Clerk Authentication</li>
+                    </ul>
+                    <button class="service-btn" data-open-modal data-service-name="Full-Stack MERN & Next.js Apps">
+                        <span>Request Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>LLM & AI Solution Engineering</h3>
+                    <p>Integration of OpenAI API, Gemini API, LangChain, prompt engineering, and custom Python machine learning models.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> LLM & Conversational Assistants</li>
+                        <li><i class="fas fa-check"></i> Predictive Machine Learning (Scikit-learn)</li>
+                        <li><i class="fas fa-check"></i> FastAPI & Flask Model Microservices</li>
+                    </ul>
+                    <button class="service-btn" data-open-modal data-service-name="LLM & AI Solution Engineering">
+                        <span>Request Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision & Speech AI</h3>
+                    <p>Real-time deep learning frameworks (CNN, LSTM, OpenCV, MFCC feature processing, TensorFlow Lite).</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Facial Asymmetry & Image Analytics</li>
+                        <li><i class="fas fa-check"></i> Speech & Audio MFCC Signal Processing</li>
+                        <li><i class="fas fa-check"></i> Real-Time Diagnostic Dashboards</li>
+                    </ul>
+                    <button class="service-btn" data-open-modal data-service-name="Computer Vision & Speech AI">
+                        <span>Request Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity & Web3 Integration</h3>
+                    <p>Security protocol audits, vulnerability assessments, and blockchain credential verification platforms.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Security Audits & Ethical Hacking</li>
+                        <li><i class="fas fa-check"></i> Smart Contracts & Decentralized Verifications</li>
+                        <li><i class="fas fa-check"></i> Secure Authentication Protocols</li>
+                    </ul>
+                    <button class="service-btn" data-open-modal data-service-name="Cybersecurity & Web3 Integration">
+                        <span>Request Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-layer-group"></i> Portfolio Showcase</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A curated collection of AI models, research applications, and full-stack web platforms.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-filter="all">All Projects</button>
+                <button class="tab-btn" data-filter="web">Full-Stack Web</button>
+                <button class="tab-btn" data-filter="ml">AI & Machine Learning</button>
+                <button class="tab-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="tab-btn" data-filter="blockchain">Blockchain / Web3</button>
+            </div>
+
+            <!-- Dynamic Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- JavaScript populates from projects.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-code"></i> Technical Skills</span>
+                <h2 class="section-title">Core <span class="gradient-text">Competencies</span></h2>
+                <p class="section-subtitle">AI models, frameworks, backend APIs, frontend tools, and cloud platforms.</p>
+            </div>
+
+            <!-- Skill Filter Tabs -->
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-skill-filter="all">All Skills</button>
+                <button class="tab-btn" data-skill-filter="aiml">AI & Data Science</button>
+                <button class="tab-btn" data-skill-filter="web">Web & Backend</button>
+                <button class="tab-btn" data-skill-filter="languages">Languages</button>
+                <button class="tab-btn" data-skill-filter="tools">Cloud & Tools</button>
+            </div>
+
+            <!-- Dynamic Skills Grid -->
+            <div class="skills-grid" id="skills-grid">
+                <!-- JavaScript populates from skills.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="experience" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education & Achievements</span>
+                <h2 class="section-title">Academic & <span class="gradient-text">Certifications</span></h2>
+                <p class="section-subtitle">Formal education, academic performance, and industry credentials.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Education 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 – 2026</span>
+                        <h3 class="timeline-title">B.Tech in Artificial Intelligence & Machine Learning Engineering</h3>
+                        <p class="timeline-subtitle">R. C. Patel Institute of Technology, Shirpur</p>
+                        <p style="color: var(--primary-cyan); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">CGPA: 7.30</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Coursework in Deep Learning, Computer Vision, Speech MFCC Signal Processing, MERN Full-Stack, and RESTful API Microservices.</p>
+                    </div>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 – 2022</span>
+                        <h3 class="timeline-title">Higher Secondary Certificate (Science PCM)</h3>
+                        <p class="timeline-subtitle">R. C. Patel Junior College, Shirpur</p>
+                        <p style="color: var(--accent-emerald); font-weight: 700; font-size: 0.95rem;">Score: 87.33%</p>
+                    </div>
+                </div>
+
+                <!-- Certifications Item -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Certifications & Credentials</span>
+                        <h3 class="timeline-title">Industry Certifications & Achievements</h3>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; padding-left: 1rem; list-style-type: disc;">
+                            <li><strong>Generative AI Landscape</strong> – Infosys Springboard</li>
+                            <li><strong>Employability Skill Development Program</strong> – RPG Foundation & Zensar</li>
+                            <li><strong>Cybersecurity & Ethical Hacking Internship</strong> – Digisuraksha Parhari Foundation</li>
+                            <li><strong>Peer-Reviewed Research Publication</strong> – IJRASET (2026), DOI: 10.22214/ijraset.2026.83023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Hire Me Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Let's Connect</span>
+                <h2 class="section-title">Hire Me / <span class="gradient-text">Start a Project</span></h2>
+                <p class="section-subtitle">Looking for an AI Full Stack Engineer or need a custom web/AI system built? Get in touch below.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Contact Information</h3>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <span>Email Address</span>
+                            <a href="mailto:chaitanyasonaje0205@gmail.com">chaitanyasonaje0205@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <span>Phone Number</span>
+                            <a href="tel:+918010083340">+91-8010083340</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <span>Location</span>
+                            <strong>Nashik, Maharashtra, India</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-details">
+                            <span>LinkedIn Profile</span>
+                            <a href="https://www.linkedin.com/in/chaitanya-sonaje-9a3293257/" target="_blank">in/chaitanya-sonaje</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-details">
+                            <span>GitHub Profile</span>
+                            <a href="https://github.com/chaitanyasonaje" target="_blank">github.com/chaitanyasonaje</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="e.g. Hiring Manager / Client Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="yourname@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Inquiry Type</label>
+                            <div class="service-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="service" value="Full-Stack Web"> MERN / Next.js Development
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="service" value="AI / ML Model"> LLM & AI Integration
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="service" value="Full Time Role"> Full-Time Job Opportunity
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Project / Position Details</label>
+                            <textarea id="contact-message" class="form-control" placeholder="Share details about the role, project requirements, or timeline..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Quote Modal -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;" class="gradient-text">Request a Technical Consultation / Quote</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Fill out this form to connect directly with Chaitanya for full-stack & AI engineering services.</p>
+            
+            <form id="modal-quote-form" onsubmit="event.preventDefault(); alert('Inquiry sent successfully! Chaitanya will contact you via email shortly.'); document.getElementById('quote-modal').classList.remove('active');">
+                <input type="hidden" id="modal-service-input" name="service_name">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" class="form-control" placeholder="Your Name or Organization" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="you@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Project Scope & Requirements</label>
+                    <textarea class="form-control" placeholder="Describe what you want to build and target completion date..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                    <span>Submit Request</span>
+                    <i class="fas fa-check-circle"></i>
+                </button>
+            </form>
+        </div>
     </div>
-    </div>
-</section>
-<!-- about section ends -->
 
-<!-- skills section starts -->
-<section class="skills" id="skills">
-    <div id="particles-js-skills"></div>
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> My <span>Skills</span></h2>
-
-    <div class="container">
-        <!-- Languages -->
-        <div class="skill-category">
-            <h3>🧑‍💻 Languages</h3>
-            <div class="skill-list">
-                <span>Python</span>
-                <span>Java</span>
-                <span>JavaScript</span>
-                <span>TypeScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>SQL</span>
-                <span>PL/SQL</span>
-            </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                Designed & Built with <i class="fas fa-heart" style="color: var(--primary-magenta);"></i> by <strong>Chaitanya Sandip Sonaje</strong> &copy; 2026. All rights reserved.
+            </p>
         </div>
-
-        <!-- Web & App Development -->
-        <div class="skill-category">
-            <h3>🌐 Web & App Development</h3>
-            <div class="skill-list">
-                <span>Next.js</span>
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Flask</span>
-                <span>MongoDB</span>
-                <span>REST APIs</span>
-            </div>
-        </div>
-
-        <!-- AI / Machine Learning / Data Science -->
-        <div class="skill-category">
-            <h3>🧠 AI / Machine Learning / Data Science</h3>
-            <div class="skill-list">
-                <span>Scikit-learn</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>Matplotlib</span>
-                <span>OpenCV</span>
-                <span>Tesseract OCR</span>
-            </div>
-        </div>
-
-        <!-- Cybersecurity & Cryptography -->
-        <div class="skill-category">
-            <h3>🔐 Cybersecurity & Cryptography</h3>
-            <div class="skill-list">
-                <span>AES</span>
-                <span>DES</span>
-                <span>RC4</span>
-                <span>Blowfish (Symmetric Encryption)</span>
-                <span>SHA-256 (Hashing)</span>
-                <span>Web3 Concepts</span>
-            </div>
-        </div>
-
-        <!-- Computer Vision / OCR / Smart Systems -->
-        <div class="skill-category">
-            <h3>👓 Computer Vision / OCR / Smart Systems</h3>
-            <div class="skill-list">
-                <span>OpenCV</span>
-                <span>AR.js</span>
-                <span>Tesseract OCR</span>
-                <span>ANPR</span>
-                <span>Image Preprocessing</span>
-                <span>Real-time Processing</span>
-            </div>
-        </div>
-
-        <!-- Tools & Platforms -->
-        <div class="skill-category">
-            <h3>🧰 Tools & Platforms</h3>
-            <div class="skill-list">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Google Colab</span>
-                <span>Jupyter Notebook</span>
-                <span>Render</span>
-                <span>Netlify</span>
-                <span>Vercel</span>
-                <span>Clerk</span>
-            </div>
-              </div>
-
-        <!-- API Integration & Services -->
-        <div class="skill-category">
-            <h3>🔌 API Integration & Services</h3>
-            <div class="skill-list">
-                <span>Gemini API</span>
-                <span>Razorpay API</span>
-                <span>Clerk Authentication API</span>
-      </div>
-        </div>
-
-</div>
-</section>
-<!-- skills section ends -->
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-    <div id="particles-js-education"></div>
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="box-container">
-    <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>2022-2026</h3>
-              <p>Pursuing</p>
-            </div>
-          </div>
-        </div>
-        <div class="content">
-          <h3>Bachelor of Technologies in Artificial Intelligence and Machine learning</h3>
-        <p>R. C. Patel Institute of Technology, Shirpur</p>
-          
-        </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/school.jpg" alt="">
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>2020-2022</h3>
-              <p>Completed</p>
-            </div>
-          </div>
-      </div>
-      <div class="content">
-          <h3>HSC Science</h3>
-      <p>R. C. Patel Junior college of Science and Commerce, Shirpur</p>
-          
-        </div>
-      </div>
-
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/school1.jpg" alt="">
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>2019-2020</h3>
-              <p>Completed</p>
-            </div>
-          </div>
-      </div>
-      <div class="content">
-          <h3>SSC | Maharashtra State Board</h3>
-      <p>R. C. Patel Secondary School, Shirpur</p>
-          
-        </div>
-      </div>
-</div>
-</section>
-<!-- education section ends -->
-
-<!-- Competitive Programming section starts -->
-<section class="competitive" id="competitive">
-    <div id="particles-js-competitive"></div>
-    <h1 class="heading">Extracurricular <span>Activities</span></h1>
-
-    <div class="container">
-        <!-- All heatmaps (CodeChef, LeetCode, GitHub) have been removed from here. -->
-        <!-- You can add more cards here for other platforms if needed -->
-
-    </div>
-</section>
-<!-- Competitive Programming section ends -->
-
-<!-- work project section starts -->
-<section class="work" id="work">
-    <div id="particles-js-work"></div>
-    <h1 class="heading">My <span>Projects</span></h1>
-
-    <div class="container">
-        <!-- Machine Learning Projects -->
-        <div class="project-category">
-            <h3>🧠 Machine Learning</h3>
-            <div class="project-list" id="ml-projects-list">
-                <!-- Machine Learning project items will be loaded here by JavaScript -->
-            </div>
-        </div>
-
-        <!-- Web Development Projects -->
-        <div class="project-category">
-            <h3>🌐 Web Development</h3>
-            <div class="project-list" id="web-projects-list">
-                <!-- Web Development project items will be loaded here by JavaScript -->
-          </div>
-        </div>
-
-        <!-- Mobile Projects -->
-        <div class="project-category">
-            <h3>📱 Mobile Development</h3>
-            <div class="project-list" id="mobile-projects-list">
-                <!-- Mobile project items will be loaded here by JavaScript -->
-      </div>
-</div>
-
-        <!-- Blockchain Projects -->
-        <div class="project-category">
-            <h3>⛓️ Blockchain</h3>
-            <div class="project-list" id="blockchain-projects-list">
-                <!-- Blockchain project items will be loaded here by JavaScript -->
-            </div>
-</div>
-
-    </div>
-</section>
-<!-- work project section ends -->
-
-<!-- experience section starts -->
-
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-    <div id="particles-js-contact"></div>
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-      <div class="contact-form-container">
-    <form id="contact-form" action="mailto:chaitanyasonaje0205@gmail.com" method="POST" enctype="text/plain">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-<!-- contact section ends -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Chaitanya's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+91 80100 83340</p>
-          <p> <i class="fas fa-envelope"></i>chaitanyasonaje0205@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Boradi (Shirpur), India-425428</p>
-          <div class="share">
-
-              <a href="https://www.linkedin.com/in/chaitanya-sonaje-9a3293257/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-              <a href="https://github.com/chaitanyasonaje" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-              <a href="chaitanyasonaje0205@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
-              <a href="https://www.instagram.com/chaitanya_sonaje_/" class="fab fa-instagram" aria-label="Instagram" target="_blank"></a>
-              <a href="https://www.kaggle.com/chaitanya205" class="fab fa-kaggle" aria-label="Kaggle" target="_blank"></a>
-              
-          </div>
-      </div>
-  </div>
-
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/chaitanya-sonaje-9a3293257/"> Chaitanya Sonaje</a></h1>
-
-</section>
-<!-- footer section ends -->
-
-
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- Chatbot HTML starts -->
-<div class="chatbot-icon">
-    <i class="fas fa-robot"></i>
-</div>
-
-<div class="chat-window">
-    <div class="chat-header">
-        <h3>Portfolio Chatbot</h3>
-        <span class="close-chat">&times;</span>
-    </div>
-    <div class="chat-body">
-        <div class="message bot-message">Hello! I'm a chatbot here to help you learn about Chaitanya's portfolio. Ask me about his skills, education, projects, or how to get in touch!</div>
-    </div>
-    <div class="chat-input">
-        <input type="text" placeholder="Ask me something...">
-        <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
-    </div>
-</div>
-<!-- Chatbot HTML ends -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js" defer></script>
-<script src="./assets/js/main.js" defer></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal" defer></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
-
-<!-- Add Typed.js CDN before script.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<!-- Main script -->
-<script src="./assets/js/script.js" defer></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+    </footer>
 
 </body>
 </html>

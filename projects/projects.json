@@ -1,123 +1,228 @@
 [
   {
-    "name": "Agrikul",
-    "desc": "A comprehensive agricultural platform connecting farmers and buyers, built with TypeScript.",
-    "image": "diabetesprediction",
+    "name": "Annapurna Mills Web Portal",
+    "desc": "Enterprise web application & industrial portal built for Annapurna Mills grain and flour processing facility managing bulk production telemetry.",
+    "image": "annapurnamills",
     "category": "web",
+    "tags": ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     "links": {
-      
-      "code": "https://github.com/chaitanyasonaje/Agrikul"
+      "view": "https://annapurnamills.edgeone.dev/"
     },
-    "updated_at": "May 23, 2025"
+    "updated_at": "Jun 2026"
   },
   {
-    "name": "CryptoScan",
-    "desc": "AI-Powered Cryptographic Algorithm Identification system using machine learning.",
+    "name": "Lakshmi Rice Industries Portal",
+    "desc": "Full-stack industrial web portal for Lakshmi Rice Industries managing bulk inventory tracking, order processing, and client product inquiries.",
+    "image": "lakshmirice",
+    "category": "web",
+    "tags": ["React.js", "Node.js", "Express", "MongoDB", "REST APIs"],
+    "links": {
+      "view": "https://lakshmiriceindustries.edgeone.dev/"
+    },
+    "updated_at": "Jun 2026"
+  },
+  {
+    "name": "Shree Ganesh Industries App",
+    "desc": "Enterprise Web Platform for Shree Ganesh Industries showcasing industrial manufacturing machinery, equipment catalog, and business inquiries.",
+    "image": "shreeganesh",
+    "category": "web",
+    "tags": ["React.js", "Tailwind CSS", "Node.js", "RESTful APIs"],
+    "links": {
+      "view": "https://shreeganeshindustries.edgeone.dev/"
+    },
+    "updated_at": "Jun 2026"
+  },
+  {
+    "name": "Shree Concretes Web Portal",
+    "desc": "Modern industrial web platform for Shree Concretes facilitating ready-mix concrete dispatching, product quotes, and construction material orders.",
+    "image": "shreeconcretes",
+    "category": "web",
+    "tags": ["React.js", "Next.js", "Tailwind CSS", "Node.js"],
+    "links": {
+      "view": "https://shreeconcretes.edgeone.dev/"
+    },
+    "updated_at": "Jun 2026"
+  },
+  {
+    "name": "Maharashtra Foods Portal",
+    "desc": "E-commerce & food processing manufacturing platform for Maharashtra Foods connecting agricultural producers with commercial buyers.",
+    "image": "maharashtrafoods",
+    "category": "web",
+    "tags": ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    "links": {
+      "view": "https://maharashtrafoods.edgeone.dev/"
+    },
+    "updated_at": "Jun 2026"
+  },
+  {
+    "name": "Navnath Kirana E-Commerce",
+    "desc": "Retail grocery e-commerce web application for Navnath Kirana Stores featuring online order booking, product catalogs, and instant cart management.",
+    "image": "navnathkirana",
+    "category": "web",
+    "tags": ["React.js", "Node.js", "Express", "MongoDB", "Responsive UI"],
+    "links": {
+      "view": "https://navnathkiranastores.edgeone.dev/"
+    },
+    "updated_at": "Jun 2026"
+  },
+  {
+    "name": "Early Stroke Risk Detection (CNN + LSTM)",
+    "desc": "Real-time multi-modal deep learning stroke screening (Facial Asymmetry CNN + Speech MFCC LSTM) achieving 93.2% accuracy. Published in IJRASET (2026), DOI: 10.22214/ijraset.2026.83023.",
+    "image": "strokeai",
+    "category": "ml",
+    "tags": ["Python", "TensorFlow Lite", "CNN", "LSTM", "MFCC", "FastAPI", "React.js", "Gemini API"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/StrokeAI"
+    },
+    "updated_at": "Jan 2026"
+  },
+  {
+    "name": "CryptoScan – Algorithm ID ML",
+    "desc": "Machine learning model achieving 94% accuracy in identifying cryptographic encryption algorithms using a Random Forest classifier with deployed Flask + React.js web dashboard.",
     "image": "diseaseprediction",
     "category": "ml",
+    "tags": ["Python", "Scikit-learn", "Random Forest", "Pandas", "NumPy", "Flask", "React.js"],
     "links": {
-     
       "code": "https://github.com/chaitanyasonaje/CryptoScan"
     },
-    "updated_at": "May 2, 2025"
-  },
-
-  {
-    "name": "Instagram Fake Account Detection",
-    "desc": "Machine learning project to detect fake Instagram accounts using various ML models including Random Forest, SVM, ANN, and GRU.",
-    "image": "er",
-    "category": "ml",
-    "links": {
-      
-      "code": "https://github.com/chaitanyasonaje/Instagram-Fake-Account-Detection-Using-Machine-Learning-"
-    },
-    "updated_at": "Apr 27, 2025"
+    "updated_at": "Dec 2025"
   },
   {
-    "name": "Sign Language Translator",
-    "desc": "Real-time sign language translation android app using AI. Converts sign gestures to speech and vice versa for seamless communication.",
-    "image": "et",
-    "category": "mobile",
-    "links": {
-    
-      "code": "https://github.com/chaitanyasonaje/sign-language-translator"
-    },
-    "updated_at": "Apr 21, 2025"
-  },
-  {
-    "name": "True-Cert",
-    "desc": "Blockchain-based digital certificate verification system ensuring secure, tamper-proof, and easily verifiable certificates.",
-    "image": "pr",
-    "category": "blockchain",
-    "links": {
-      "view": "https://true-cert-1.onrender.com/",
-      "code": "https://github.com/chaitanyasonaje/True-Cert"
-    },
-    "updated_at": "Feb 28, 2025"
-  },
-  {
-    "name": "Diabetes Prediction Tool",
-    "desc": "Machine learning model to predict diabetes based on medical data and test results.",
-    "image": "mgc",
-    "category": "ml",
-    "links": {
-      
-      "code": "https://github.com/chaitanyasonaje/Diabetes-prediction-tool"
-    },
-    "updated_at": "Feb 1, 2025"
-  },
-  {
-    "name": "TollEase",
-    "desc": "Toll Management System with License Plate Recognition (LPR) technology.",
-    "image": "cf",
-    "category": "web",
-    "links": {
-      
-      "code": "https://github.com/chaitanyasonaje/TollEase"
-    },
-    "updated_at": "Dec 30, 2024"
-  },
-  {
-    "name": "ResuMate",
-    "desc": "AI-powered resume generation tool to help create professional resumes.",
+    "name": "ResuMate – AI Resume Builder",
+    "desc": "AI-driven resume platform powered by Google Gemini API for smart content suggestions, multi-step interactive form, real-time live preview, and ATS-compatible template engine.",
     "image": "mern",
     "category": "web",
+    "tags": ["Next.js", "TypeScript", "Gemini API", "TailwindCSS", "React.js"],
     "links": {
       "view": "https://chaitanya-resumateai.netlify.app/",
       "code": "https://github.com/chaitanyasonaje/ResuMate"
     },
-    "updated_at": "Dec 12, 2024"
+    "updated_at": "Dec 2024"
   },
   {
-    "name": "CryptoLedger",
-    "desc": "Blockchain-based project for cryptocurrency transaction management.",
+    "name": "KaggleGenius AI Assistant",
+    "desc": "Intelligent AI assistant helping data scientists analyze datasets, suggest optimal features, select models, and generate baseline Python notebooks.",
+    "image": "kagglegenius",
+    "category": "ml",
+    "tags": ["TypeScript", "Next.js", "Python", "FastAPI", "Tailwind CSS"],
+    "links": {
+      "view": "https://kagglegeniuaai.vercel.app",
+      "code": "https://github.com/chaitanyasonaje/KaggleGeniusAI"
+    },
+    "updated_at": "Jan 2026"
+  },
+  {
+    "name": "RoomNMeal Accommodation Platform",
+    "desc": "Full-stack student accommodation and meal booking ecosystem with cross-platform React Native app and TypeScript backend.",
+    "image": "roomnmeal",
+    "category": "web",
+    "tags": ["TypeScript", "React Native", "Node.js", "Express", "MongoDB"],
+    "links": {
+      "view": "https://roomnmeal.netlify.app/",
+      "code": "https://github.com/chaitanyasonaje/roomnmeal-backend"
+    },
+    "updated_at": "Mar 2026"
+  },
+  {
+    "name": "Inquiro AI Knowledge Explorer",
+    "desc": "AI-powered knowledge exploration engine facilitating interactive research discovery and contextual semantic queries.",
+    "image": "inquiro",
+    "category": "ml",
+    "tags": ["Python", "PyTorch", "NLP", "FastAPI", "React"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/Inquiro"
+    },
+    "updated_at": "Sep 2025"
+  },
+  {
+    "name": "CourseHub Learning Platform",
+    "desc": "Web platform connecting students with courses, video tutorials, and interactive skill tracking dashboards.",
+    "image": "coursehub",
+    "category": "web",
+    "tags": ["JavaScript", "React.js", "Node.js", "MongoDB", "Express"],
+    "links": {
+      "view": "https://coursehub24.netlify.app/",
+      "code": "https://github.com/chaitanyasonaje/CourseHub"
+    },
+    "updated_at": "Aug 2025"
+  },
+  {
+    "name": "Agrikul Agricultural Marketplace",
+    "desc": "A comprehensive agricultural marketplace connecting local farmers directly with bulk buyers. Features real-time price trends and trade listings.",
+    "image": "agrikul",
+    "category": "web",
+    "tags": ["TypeScript", "Next.js", "Node.js", "Tailwind CSS", "PostgreSQL"],
+    "links": {
+      "view": "https://onspace.ai",
+      "code": "https://github.com/chaitanyasonaje/Agrikul"
+    },
+    "updated_at": "May 2025"
+  },
+  {
+    "name": "Instagram Fake Profile Detector",
+    "desc": "Machine learning system detecting spam and fake social profiles with 94%+ accuracy using Random Forest, SVM, and Neural Networks.",
+    "image": "er",
+    "category": "ml",
+    "tags": ["Python", "Machine Learning", "Pandas", "Scikit-Learn", "Streamlit"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/Instagram-Fake-Account-Detection-Using-Machine-Learning-"
+    },
+    "updated_at": "Apr 2025"
+  },
+  {
+    "name": "Sign Language Translator App",
+    "desc": "Real-time sign language computer vision mobile application that translates hand gestures into spoken text and audio in real-time.",
+    "image": "et",
+    "category": "mobile",
+    "tags": ["Android", "Python", "OpenCV", "TensorFlow Lite", "Java"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/sign-language-translator"
+    },
+    "updated_at": "Apr 2025"
+  },
+  {
+    "name": "True-Cert Blockchain",
+    "desc": "Decentralized digital credential verification platform ensuring tamper-proof academic and professional certification issuance on Ethereum.",
+    "image": "pr",
+    "category": "blockchain",
+    "tags": ["Solidity", "Ethereum", "React.js", "Web3.js", "Ethers.js"],
+    "links": {
+      "view": "https://true-cert-1.onrender.com/",
+      "code": "https://github.com/chaitanyasonaje/True-Cert"
+    },
+    "updated_at": "Feb 2025"
+  },
+  {
+    "name": "TollEase LPR System",
+    "desc": "Automated toll collection system equipped with Automatic License Plate Recognition (ALPR) via computer vision cameras.",
+    "image": "cf",
+    "category": "web",
+    "tags": ["Python", "OpenCV", "Flask", "SQLite", "Bootstrap"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/TollEase"
+    },
+    "updated_at": "Dec 2024"
+  },
+  {
+    "name": "CryptoLedger Web3",
+    "desc": "Distributed ledger transaction audit platform offering real-time tracking of crypto transactions and smart contract events.",
     "image": "sih",
     "category": "blockchain",
+    "tags": ["Solidity", "Web3", "Node.js", "Express", "Chart.js"],
     "links": {
-     
       "code": "https://github.com/chaitanyasonaje/CryptoLedger"
     },
-    "updated_at": "Dec 12, 2024"
+    "updated_at": "Dec 2024"
   },
   {
-    "name": "Portfolio Website",
-    "desc": "Personal portfolio website showcasing projects and skills.",
-    "image": "ct",
-    "category": "web",
-    "links": {
-      "view": "https://chaitanyasonaje.github.io/portfolio/",
-      "code": "https://github.com/chaitanyasonaje/portfolio"
-    },
-    "updated_at": "Dec 6, 2024"
-  },
-  {
-    "name": "React Native Todo App",
-    "desc": "Mobile application for managing tasks and to-do lists built with React Native.",
+    "name": "React Native Task Master",
+    "desc": "Cross-platform productivity and task management app with custom notifications, offline persistence, and gesture interactions.",
     "image": "br",
     "category": "mobile",
+    "tags": ["React Native", "Expo", "Redux Toolkit", "AsyncStorage"],
     "links": {
       "code": "https://github.com/chaitanyasonaje/react-native-todo-app"
     },
-    "updated_at": "Dec 4, 2024"
+    "updated_at": "Dec 2024"
   }
 ]
