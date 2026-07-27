@@ -88,5 +88,10 @@
     "name": "Postman & VS Code",
     "category": "tools",
     "icon": "https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/vscode/vscode-original.svg"
+  },
+  {
+    "name": "n8n & Docker Automation",
+    "category": "tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
   }
 ]

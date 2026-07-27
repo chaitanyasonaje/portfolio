@@ -1,5 +1,16 @@
 [
   {
+    "name": "Cold Email & Outreach n8n Automation Engine",
+    "desc": "Self-hosted Cold Email & Outreach Automation Engine built with n8n, Docker, and Microsoft 365. Features lead auto-import from OneDrive Excel, AI-ready dynamic email personalization, template rotation, deduplication, Outlook delivery, and SQLite execution logging.",
+    "image": "cold_emailing_n8n",
+    "category": "web",
+    "tags": ["n8n", "Docker", "Microsoft 365", "SQLite", "Outlook API", "Workflow Automation"],
+    "links": {
+      "code": "https://github.com/chaitanyasonaje/Cold-Emailing-n8n-Automation"
+    },
+    "updated_at": "Jul 2026"
+  },
+  {
     "name": "Annapurna Mills Web Portal",
     "desc": "Enterprise web application & industrial portal built for Annapurna Mills grain and flour processing facility managing bulk production telemetry.",
     "image": "annapurnamills",
