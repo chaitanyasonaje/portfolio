@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
     initCustomCursor();
-    initAudioEngine();
+    initThemeEngine();
     initNavbar();
     initTypingEffect();
     init3DTiltCards();
@@ -70,34 +70,31 @@ function initCustomCursor() {
     });
 }
 
-/* 3. Cyber Web Audio Synthesizer FX Engine */
-let audioCtx = null;
-let soundEnabled = false;
+/* 3. Theme Engine (Light / Dark Mode Switcher) */
+function initThemeEngine() {
+    const themeBtn = document.getElementById('theme-toggle');
+    if (!themeBtn) return;
 
-function initAudioEngine() {
-    const audioBtn = document.getElementById('audio-toggle');
-    if (!audioBtn) return;
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeBtn.querySelector('i').className = 'fas fa-sun';
+        themeBtn.querySelector('span').textContent = 'Light Mode';
+    }
 
-    audioBtn.addEventListener('click', () => {
-        if (!audioCtx) {
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
 
-        soundEnabled = !soundEnabled;
-        if (soundEnabled) {
-            audioBtn.classList.add('active');
-            audioBtn.querySelector('span').textContent = 'Cyber Audio: ON';
-            playTone(440, 'sine', 0.1, 0.05); // Welcome chime
+        if (isLight) {
+            themeBtn.querySelector('i').className = 'fas fa-sun';
+            themeBtn.querySelector('span').textContent = 'Light Mode';
+            localStorage.setItem('portfolio-theme', 'light');
         } else {
-            audioBtn.classList.remove('active');
-            audioBtn.querySelector('span').textContent = 'Cyber Audio: OFF';
-        }
-    });
-
-    // Subtle click & hover audio feedback
-    document.addEventListener('click', () => {
-        if (soundEnabled && audioCtx) {
-            playTone(880, 'triangle', 0.08, 0.03);
+            themeBtn.querySelector('i').className = 'fas fa-moon';
+            themeBtn.querySelector('span').textContent = 'Dark Mode';
+            localStorage.setItem('portfolio-theme', 'dark');
         }
     });
 }

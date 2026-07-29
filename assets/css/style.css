@@ -8,10 +8,10 @@
 :root {
     --bg-dark: #02040a;
     --bg-surface: #060913;
-    --bg-card: rgba(10, 16, 30, 0.75);
-    --bg-glass: rgba(255, 255, 255, 0.03);
-    --border-glass: rgba(255, 255, 255, 0.08);
-    --border-glow: rgba(0, 240, 255, 0.25);
+    --bg-card: rgba(13, 20, 38, 0.65);
+    --bg-glass: rgba(255, 255, 255, 0.04);
+    --border-glass: rgba(255, 255, 255, 0.12);
+    --border-glow: rgba(0, 240, 255, 0.35);
     
     --primary-cyan: #00f0ff;
     --primary-violet: #9d4edd;
@@ -20,7 +20,8 @@
     
     --grad-cyan-violet: linear-gradient(135deg, #00f0ff 0%, #9d4edd 100%);
     --grad-violet-magenta: linear-gradient(135deg, #9d4edd 0%, #ff007f 100%);
-    --grad-card-border: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(157, 78, 221, 0.1), rgba(255, 0, 127, 0.3));
+    --grad-card-border: linear-gradient(135deg, rgba(0, 240, 255, 0.5), rgba(157, 78, 221, 0.2), rgba(255, 0, 127, 0.4));
+    --grad-glass-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
     
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
@@ -29,15 +30,17 @@
     --font-head: 'Outfit', -apple-system, sans-serif;
     --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
     
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
     --radius-full: 9999px;
     
-    --shadow-glow-cyan: 0 0 25px rgba(0, 240, 255, 0.35);
-    --shadow-glow-violet: 0 0 25px rgba(157, 78, 221, 0.35);
-    --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow-cyan: 0 0 30px rgba(0, 240, 255, 0.4);
+    --shadow-glow-violet: 0 0 30px rgba(157, 78, 221, 0.4);
+    --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    --shadow-glass-hover: 0 30px 60px rgba(0, 240, 255, 0.2);
     
+    --backdrop-blur: blur(20px) saturate(180%);
     --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -55,7 +58,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background: radial-gradient(circle at 15% 20%, #0d1326 0%, #030612 45%, #020408 100%);
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -64,6 +67,30 @@ body {
     position: relative;
     -webkit-font-smoothing: antialiased;
     cursor: default;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.07) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(157, 78, 221, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Custom 3D Magnetic Glowing Cursor (Desktop Only) */
@@ -322,27 +349,71 @@ header.scrolled {
     align-items: center;
 }
 
-.audio-btn {
+.theme-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 0.9rem;
+    gap: 0.45rem;
+    padding: 0.45rem 0.95rem;
     border-radius: var(--radius-full);
     background: var(--bg-glass);
     border: 1px solid var(--border-glass);
-    color: var(--text-muted);
+    color: var(--text-main);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    backdrop-filter: blur(10px);
 }
 
-.audio-btn:hover,
-.audio-btn.active {
+.theme-btn:hover {
     background: rgba(0, 240, 255, 0.15);
     border-color: var(--primary-cyan);
     color: var(--primary-cyan);
     box-shadow: var(--shadow-glow-cyan);
+}
+
+/* Light Theme Variables & Overrides */
+body.light-theme {
+    --bg-dark: #f0f4f9;
+    --bg-surface: #e2e8f0;
+    --bg-card: rgba(255, 255, 255, 0.75);
+    --bg-glass: rgba(255, 255, 255, 0.5);
+    --border-glass: rgba(0, 0, 0, 0.1);
+    --border-glow: rgba(0, 162, 255, 0.35);
+    
+    --primary-cyan: #0077ff;
+    --primary-violet: #7b2cbf;
+    --primary-magenta: #d90429;
+    --accent-emerald: #00a86b;
+    
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-dim: #64748b;
+    
+    --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.08);
+    --shadow-glow-cyan: 0 0 25px rgba(0, 119, 255, 0.25);
+    background: radial-gradient(circle at 15% 20%, #e2e8f0 0%, #cbd5e1 45%, #f1f5f9 100%);
+}
+
+body.light-theme header.scrolled {
+    background: rgba(240, 244, 249, 0.92);
+}
+
+body.light-theme .hero-badge,
+body.light-theme .hero-floating-badge,
+body.light-theme .hero-floating-tag,
+body.light-theme .stat-card,
+body.light-theme .about-glass-card,
+body.light-theme .service-card,
+body.light-theme .project-card,
+body.light-theme .skill-card,
+body.light-theme .timeline-content,
+body.light-theme .edu-card,
+body.light-theme .glass-form-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: var(--text-main);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .hire-pill-btn {
