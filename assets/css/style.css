@@ -1569,3 +1569,233 @@ footer {
         padding: 1.5rem 1.2rem;
     }
 }
+
+/* ==========================================================================
+   PRELOADER & LOADING SCREEN
+   ========================================================================== */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #02040a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader-container.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.spinner-3d {
+    width: 55px;
+    height: 55px;
+    border: 3px solid rgba(0, 240, 255, 0.15);
+    border-top: 3px solid var(--primary-cyan);
+    border-right: 3px solid var(--primary-violet);
+    border-radius: 50%;
+    animation: spin3D 1s linear infinite;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+@keyframes spin3D {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-welcome {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: var(--grad-cyan-violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.loader-text {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   SPECULAR SPOTLIGHT LIGHTING
+   ========================================================================== */
+
+/* ==========================================================================
+   FUTURISTIC STARTUP WELCOME TOAST BANNER
+   ========================================================================== */
+
+.loader-welcome {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: var(--grad-cyan-violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.welcome-toast-container {
+    position: fixed;
+    top: 90px;
+    right: 24px;
+    z-index: 9999;
+    perspective: 1000px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0, -30px, 0) scale(0.95);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.welcome-toast-container.active {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.welcome-toast-card {
+    position: relative;
+    background: rgba(8, 14, 28, 0.88);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    border-radius: var(--radius-md);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 240, 255, 0.25);
+    padding: 18px 22px;
+    max-width: 360px;
+    overflow: hidden;
+}
+
+.welcome-toast-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--grad-cyan-violet);
+    animation: toastShine 3s infinite linear;
+}
+
+@keyframes toastShine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.welcome-toast-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: var(--radius-full);
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--primary-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.status-dot.pulse {
+    animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.welcome-toast-content h3 {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.welcome-toast-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.welcome-toast-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-toast-explore {
+    background: var(--grad-cyan-violet);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.btn-toast-explore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+}
+
+.welcome-toast-dismiss {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.welcome-toast-dismiss:hover {
+    color: var(--primary-cyan);
+}
+
+@media (max-width: 768px) {
+    .welcome-toast-container {
+        top: 80px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+    }
+    
+    .welcome-toast-card {
+        max-width: 100%;
+    }
+}
+
+

@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
     initCustomCursor();
+    initParticleSparkTrail();
     initThemeEngine();
     initNavbar();
     initTypingEffect();
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSkills();
     initModal();
     initContactForm();
+    initWelcomeToast();
 });
 
 /* 1. Preloader Handler */
@@ -23,7 +25,10 @@ function initPreloader() {
     if (loader) {
         setTimeout(() => {
             loader.classList.add('fade-out');
-        }, 700);
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 600);
+        }, 600);
     }
 }
 
@@ -55,7 +60,7 @@ function initCustomCursor() {
     renderCursorRing();
 
     // Hover state over interactive elements
-    const interactiveElements = 'a, button, .project-card, .service-card, .skill-card, input, textarea, .tab-btn';
+    const interactiveElements = 'a, button, .project-card, .service-card, .skill-card, input, textarea, .tab-btn, .hud-mode-btn, .hud-action-btn';
     document.addEventListener('mouseover', (e) => {
         if (e.target.closest(interactiveElements)) {
             cursorRing.classList.add('active');
@@ -70,12 +75,82 @@ function initCustomCursor() {
     });
 }
 
+/* 2b. Mouse Particle Spark Trail */
+function initParticleSparkTrail() {
+    if (window.innerWidth < 768) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.id = 'cursor-spark-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '9998';
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const colors = ['#00f0ff', '#9d4edd', '#ff007f', '#ffffff'];
+
+    window.addEventListener('mousemove', (e) => {
+        if (Math.random() > 0.35) return;
+        particles.push({
+            x: e.clientX,
+            y: e.clientY,
+            vx: (Math.random() - 0.5) * 1.8,
+            vy: (Math.random() - 0.5) * 1.8 - 0.5,
+            size: Math.random() * 2.4 + 1,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            life: 1.0,
+            decay: Math.random() * 0.03 + 0.02
+        });
+    });
+
+    function renderSparks() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life -= p.decay;
+
+            if (p.life <= 0) {
+                particles.splice(i, 1);
+                continue;
+            }
+
+            ctx.save();
+            ctx.globalAlpha = p.life;
+            ctx.fillStyle = p.color;
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = p.color;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+        }
+
+        requestAnimationFrame(renderSparks);
+    }
+    renderSparks();
+}
+
 /* 3. Theme Engine (Light / Dark Mode Switcher) */
 function initThemeEngine() {
     const themeBtn = document.getElementById('theme-toggle');
     if (!themeBtn) return;
 
-    // Load saved theme preference
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
@@ -97,24 +172,6 @@ function initThemeEngine() {
             localStorage.setItem('portfolio-theme', 'dark');
         }
     });
-}
-
-function playTone(freq, type, duration, vol) {
-    if (!audioCtx || !soundEnabled) return;
-    try {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-
-        osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-    } catch (e) {}
 }
 
 /* 4. Navbar & Scroll Animations */
@@ -211,9 +268,9 @@ function initTypingEffect() {
     type();
 }
 
-/* 6. 3D Card Interactive Tilt & Specular Lighting */
+/* 6. 3D Card Interactive Tilt & Dynamic Specular Lighting */
 function init3DTiltCards() {
-    const cards = document.querySelectorAll('.service-card, .about-glass-card, .contact-info-card, .contact-form-card, .timeline-content');
+    const cards = document.querySelectorAll('.project-card, .service-card, .skill-card, .about-glass-card, .contact-info-card, .contact-form-card, .timeline-content, .hero-3d-card');
     
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -224,16 +281,16 @@ function init3DTiltCards() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = (y - centerY) / 12;
-            const rotateY = (centerX - x) / 12;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 240, 255, 0.08), rgba(15, 23, 42, 0.65) 80%)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-            card.style.background = `var(--bg-card)`;
         });
     });
 }
@@ -333,7 +390,6 @@ function renderProjects(projects) {
         grid.appendChild(card);
     });
 
-    // Re-apply 3D Tilt listener
     setTimeout(init3DTiltCards, 100);
 }
 
@@ -380,7 +436,7 @@ function renderSkills(skills) {
 
     skills.forEach(skill => {
         const card = document.createElement('div');
-        card.className = 'skill-card';
+        card.className = 'skill-card 3d-tilt-card';
         card.innerHTML = `
             <div class="skill-icon">
                 <img src="${skill.icon}" alt="${skill.name}" loading="lazy">
@@ -389,6 +445,8 @@ function renderSkills(skills) {
         `;
         grid.appendChild(card);
     });
+
+    setTimeout(init3DTiltCards, 100);
 }
 
 function initSkillFilters() {
@@ -458,4 +516,34 @@ function initContactForm() {
         const modal = document.getElementById('quote-modal');
         if (modal) modal.classList.remove('active');
     });
+}
+
+/* 12. Startup Welcome Toast Message Handler */
+function initWelcomeToast() {
+    const toast = document.getElementById('welcome-toast');
+    const closeBtn = document.getElementById('welcome-toast-close');
+    const dismissX = document.getElementById('welcome-toast-dismiss-x');
+    if (!toast) return;
+
+    // Show toast after preloader hides
+    setTimeout(() => {
+        toast.classList.add('active');
+    }, 1200);
+
+    const dismissToast = () => {
+        toast.classList.remove('active');
+        if (window.ThreeEngine && window.ThreeEngine.triggerRipple) {
+            window.ThreeEngine.triggerRipple();
+        }
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', dismissToast);
+    if (dismissX) dismissX.addEventListener('click', dismissToast);
+
+    // Auto dismiss after 9 seconds
+    setTimeout(() => {
+        if (toast.classList.contains('active')) {
+            toast.classList.remove('active');
+        }
+    }, 9000);
 }
